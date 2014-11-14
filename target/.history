@@ -1,0 +1,114 @@
+eclipse
+exit
+ls-install grizzled-slf4j
+run
+exit
+run
+exit
+run
+compile
+exit
+package
+exit
+compile
+run
+run UK 20140728
+run Holland 20140728
+compile
+run Holland 20140728
+compile
+run Holland 20140728
+compile
+run France 20140728
+run Germany 20140728
+run Singapore 20140728
+exit
+compile
+run 
+run UK 20140729
+compile
+run UK 20140729
+run India 20140729
+exit()
+exit
+compile
+:q
+exit
+compile
+package
+exit
+package
+compile
+exit
+package
+exit
+compile
+run India 20140730
+exit
+eclipse
+last *:update
+sbt sbt-version
+sbt-version
+sbt eclipse
+eclipse
+compile
+quit
+exit
+package
+exit
+one-jar
+exit
+run one-jar
+exit
+run one-jar
+exit
+run one-jar
+exit
+assembly
+exit
+assembly
+exit
+assembly
+run
+run UK 20140822
+console
+eclipse
+exit
+compile
+assembly
+exit
+run
+exit
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=512M -XX:MaxPermSize=1024
+exit
+run India "20140902"
+run India 
+run India "20140902"
+exit 
+assembly
+exit
+assembly
+exit
+eclipse
+exit
+eclipse
+exit
+eclipse
+exit
+eclipse
+exit
+compile
+assembly
+exit
+assembly
+exit
+assembly
+exit
+eclipse
+exit
+assembly
+compile
+exit
+compile
+assembly
+exit
