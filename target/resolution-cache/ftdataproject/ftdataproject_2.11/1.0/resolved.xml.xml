@@ -4,7 +4,7 @@
 		module="ftdataproject_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20140911225839"
+		publication="20141116163928"
 	>
 		<description>
 		FTDataProject
@@ -40,6 +40,8 @@
 		<dependency org="ch.qos.logback" name="logback-core" rev="1.1.2" conf="compile->default(compile)"/>
 		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.mongodb" name="casbah_2.11" rev="2.7.3" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.3.5" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-camel_2.10" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="org.apache.camel" name="camel-scala" rev="2.14.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

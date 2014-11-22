@@ -16,8 +16,18 @@
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-core_2.11/jars/casbah-core_2.11-2.7.3.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-query_2.11/jars/casbah-query_2.11-2.7.3.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-gridfs_2.11/jars/casbah-gridfs_2.11-2.7.3.jar"/>
-  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.5.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.6.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/jars/akka-camel_2.10-2.3.6.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.6.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-scala/bundles/camel-scala-2.14.0.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-core/jars/camel-core-2.14.0.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.bind/jaxb-impl/jars/jaxb-impl-2.2.7.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.bind/jaxb-core/jars/jaxb-core-2.2.7.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars/istack-commons-runtime-2.16.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars/FastInfoset-1.2.12.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jsr173_api/jars/jsr173_api-1.0.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.scalatest/scalatest_2.11/jars/scalatest_2.11-2.1.7.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>

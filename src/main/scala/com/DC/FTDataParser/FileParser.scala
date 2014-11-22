@@ -43,7 +43,7 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 	import com.DC.FTDataParser.XMLPersister._
 	XMLPersisterlogger.info("Fetching Currency Pairs")
 	val nodes = getXML
-	XMLPersisterlogger.info("Testing USD INR Currency Pair {}", getexchange(nodes,"INR"))
+	XMLPersisterlogger.info("Testing USD GBP Currency Pair {}", getexchange(nodes,"GBP"))
 	XMLPersisterlogger.info("Extracting Currency Complete")
 	
 	val sf = new SimpleDateFormat("MMM dd yyyy")

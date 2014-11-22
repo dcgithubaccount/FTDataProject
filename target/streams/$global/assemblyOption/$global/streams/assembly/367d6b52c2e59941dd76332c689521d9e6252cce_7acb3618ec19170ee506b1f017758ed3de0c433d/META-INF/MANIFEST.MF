@@ -1,0 +1,53 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1410773365008
+Build-Jdk: 1.7.0_67
+Built-By: ubuntu
+Bundle-Description: Camel Scala DSL
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: camel-scala
+Bundle-SymbolicName: org.apache.camel.camel-scala
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.14.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.camel.scala.dsl.builder;uses:="org.apache.cam
+ el.builder,org.apache.camel.scala.dsl,org.apache.camel,scala.runtime,sc
+ ala,scala.collection,org.apache.camel.scala,scala.collection.mutable,or
+ g.apache.camel.model.dataformat,org.slf4j,org.apache.camel.processor.ag
+ gregate,org.apache.camel.model,org.apache.camel.scala.dsl.languages,sca
+ la.reflect,org.apache.camel.spi";version="2.14.0",org.apache.camel.scal
+ a;uses:="scala.reflect,org.apache.camel,scala.runtime,scala,org.apache.
+ camel.builder,org.apache.camel.processor.aggregate,org.apache.camel.spi
+ ,javax.activation,scala.collection,scala.collection.mutable,org.apache.
+ camel.scala.dsl.languages,org.apache.camel.util";version="2.14.0",org.a
+ pache.camel.scala.dsl.languages;uses:="scala.collection.mutable,org.apa
+ che.camel,scala.reflect,org.apache.camel.spi,scala,org.apache.camel.lan
+ guage.tokenizer";version="2.14.0",org.apache.camel.scala.dsl;uses:="sca
+ la.reflect,scala.runtime,scala,org.apache.camel.processor.aggregate,sca
+ la.collection,org.apache.camel.model,org.apache.camel.scala,org.apache.
+ camel,org.apache.camel.spi,scala.collection.mutable,org.apache.camel.sc
+ ala.dsl.builder,org.apache.camel.processor.idempotent,org.apache.camel.
+ model.config,org.apache.camel.processor.resequencer,org.apache.camel.bu
+ ilder";version="2.14.0",org.apache.camel.scala.converter;uses:="scala.c
+ ollection.immutable,scala.collection,org.apache.camel,scala.collection.
+ mutable,scala.reflect,scala.collection.concurrent,scala,scala.xml,org.w
+ 3c.dom";version="2.14.0"
+Implementation-Title: Apache Camel
+Implementation-Version: 2.14.0
+Import-Package: javax.activation,org.apache.camel;version="[2.14,2.15)",
+ org.apache.camel.builder;version="[2.14,2.15)",org.apache.camel.languag
+ e.tokenizer;version="[2.14,2.15)",org.apache.camel.model;version="[2.14
+ ,2.15)",org.apache.camel.model.config;version="[2.14,2.15)",org.apache.
+ camel.model.dataformat;version="[2.14,2.15)",org.apache.camel.processor
+ .aggregate;version="[2.14,2.15)",org.apache.camel.processor.idempotent;
+ version="[2.14,2.15)",org.apache.camel.processor.resequencer;version="[
+ 2.14,2.15)",org.apache.camel.spi;version="[2.14,2.15)",org.apache.camel
+ .util;version="[2.14,2.15)",org.slf4j;version="[1.6,2)",org.w3c.dom,sca
+ la;version="[2.11,2.12)",scala.collection;version="[2.11,2.12)",scala.c
+ ollection.concurrent;version="[2.11,2.12)",scala.collection.immutable;v
+ ersion="[2.11,2.12)",scala.collection.mutable;version="[2.11,2.12)",sca
+ la.reflect;version="[2.11,2.12)",scala.runtime;version="[2.11,2.12)",sc
+ ala.xml;version="[1.0,2)"
+Karaf-Info: Camel;camel-scala=2.14.0
+Tool: Bnd-1.50.0

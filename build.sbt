@@ -19,7 +19,11 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
 libraryDependencies += "org.mongodb" %% "casbah" % "2.7.3"  
 
-libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.3.5"                 
+libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.3.6"
+
+libraryDependencies += "com.typesafe.akka" % "akka-camel_2.10" % "2.3.6"
+
+libraryDependencies += "org.apache.camel" % "camel-scala" % "2.14.0"               
                             
 
 
