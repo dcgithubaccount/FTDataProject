@@ -7,8 +7,20 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20141116163928"/>
+		date="20150121222446"/>
 	<dependencies>
+		<module organisation="org.ccil.cowan.tagsoup" name="tagsoup">
+			<revision name="1.2" status="release" pubdate="20080106161959" resolver="public" artresolver="public" homepage="http://home.ccil.org/~cowan/XML/tagsoup/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="26">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1050" time="335" location="/Users/deepakchoudhary/.ivy2/cache/org.ccil.cowan.tagsoup/tagsoup/ivy-1.2.xml" searched="true" original-local-location="/Users/deepakchoudhary/.ivy2/cache/org.ccil.cowan.tagsoup/tagsoup/ivy-1.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom"/>
+				<caller organisation="ftdataproject" name="ftdataproject_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="tagsoup" type="jar" ext="jar" status="successful" details="" size="90023" time="438" location="/Users/deepakchoudhary/.ivy2/cache/org.ccil.cowan.tagsoup/tagsoup/jars/tagsoup-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.apache.camel" name="camel-scala">
 			<revision name="2.14.0" status="release" pubdate="20140915102930" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
 				<metadata-artifact status="no" details="" size="97042" time="0" location="/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-scala/ivy-2.14.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/camel/camel-scala/2.14.0/camel-scala-2.14.0.pom"/>
@@ -26,7 +38,7 @@
 				<caller organisation="org.apache.camel" name="camel-scala" conf="default, compile, runtime, master" rev="2.14.0" rev-constraint-default="2.14.0" rev-constraint-dynamic="2.14.0" callerrev="2.14.0"/>
 				<caller organisation="com.typesafe.akka" name="akka-camel_2.10" conf="default, compile, runtime, master" rev="2.10.3" rev-constraint-default="2.10.3" rev-constraint-dynamic="2.10.3" callerrev="2.3.6"/>
 				<artifacts>
-					<artifact name="camel-core" type="jar" ext="jar" status="successful" details="" size="2782417" time="25720" location="/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-core/jars/camel-core-2.14.0.jar">
+					<artifact name="camel-core" type="jar" ext="jar" status="no" details="" size="2782417" time="0" location="/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-core/jars/camel-core-2.14.0.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -112,24 +124,24 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-camel_2.10">
-			<revision name="2.3.6" status="release" pubdate="20140905073733" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="16">
+			<revision name="2.3.6" status="release" pubdate="20140905073733" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="16">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="3949" time="579" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/ivy-2.3.6.xml" searched="true" original-local-location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/ivy-2.3.6.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom"/>
+				<metadata-artifact status="no" details="" size="3863" time="0" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom"/>
 				<caller organisation="ftdataproject" name="ftdataproject_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="akka-camel_2.10" type="jar" ext="jar" status="successful" details="" size="207352" time="1526" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/jars/akka-camel_2.10-2.3.6.jar">
+					<artifact name="akka-camel_2.10" type="jar" ext="jar" status="no" details="" size="207352" time="0" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/jars/akka-camel_2.10-2.3.6.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-slf4j_2.10">
-			<revision name="2.3.6" status="release" pubdate="20140905073534" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="17">
+			<revision name="2.3.6" status="release" pubdate="20140905073534" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="17">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2534" time="601" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.6.xml" searched="true" original-local-location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.6.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom"/>
+				<metadata-artifact status="no" details="" size="3043" time="0" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-camel_2.10" conf="default, compile, runtime, master" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="2.3.6"/>
 				<artifacts>
-					<artifact name="akka-slf4j_2.10" type="jar" ext="jar" status="successful" details="" size="15535" time="607" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.6.jar">
+					<artifact name="akka-slf4j_2.10" type="jar" ext="jar" status="no" details="" size="15535" time="0" location="/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.6.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar"/>
 					</artifact>
 				</artifacts>

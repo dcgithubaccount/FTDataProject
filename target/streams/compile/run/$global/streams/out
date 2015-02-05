@@ -1,11 +1,12 @@
-[0m[[0minfo[0m] [0mRunning com.DC.FTDataParser.MainApp India 20140902[0m
+[0m[[0minfo[0m] [0mRunning com.DC.FTDataParser.MainApp SouthAfrica 20141126[0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/scala-2.11/classes[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.1.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.7.jar[0m
-[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.2.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-commons_2.11/jars/casbah-commons_2.11-2.7.3.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.github.nscala-time/nscala-time_2.11/jars/nscala-time_2.11-1.0.0.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.3.jar[0m
@@ -14,13 +15,27 @@
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-core_2.11/jars/casbah-core_2.11-2.7.3.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-query_2.11/jars/casbah-query_2.11-2.7.3.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.mongodb/casbah-gridfs_2.11/jars/casbah-gridfs_2.11-2.7.3.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-2 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-2 exited.[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.6.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-camel_2.10/jars/akka-camel_2.10-2.3.6.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.6.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-scala/bundles/camel-scala-2.14.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.apache.camel/camel-core/jars/camel-core-2.14.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.bind/jaxb-impl/jars/jaxb-impl-2.2.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.bind/jaxb-core/jars/jaxb-core-2.2.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars/istack-commons-runtime-2.16.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars/FastInfoset-1.2.12.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jsr173_api/jars/jsr173_api-1.0.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
 [0m[[0mdebug[0m] [0mNot interrupting system thread Thread[Keep-Alive-Timer,8,system][0m
+[0m[[0mdebug[0m] [0mInterrupting thread MongoCleaner1248008159[0m
+[0m[[0mdebug[0m] [0m	Interrupted MongoCleaner1248008159[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
 [0m[[0mdebug[0m] [0mInterrupting thread cluster-1-localhost:27017[0m
 [0m[[0mdebug[0m] [0m	Interrupted cluster-1-localhost:27017[0m
-[0m[[0mdebug[0m] [0mInterrupting thread MongoCleaner1886701854[0m
-[0m[[0mdebug[0m] [0m	Interrupted MongoCleaner1886701854[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

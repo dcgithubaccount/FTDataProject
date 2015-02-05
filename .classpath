@@ -28,6 +28,7 @@
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars/istack-commons-runtime-2.16.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars/FastInfoset-1.2.12.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jsr173_api/jars/jsr173_api-1.0.jar"/>
+  <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.ccil.cowan.tagsoup/tagsoup/jars/tagsoup-1.2.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.scalatest/scalatest_2.11/jars/scalatest_2.11-2.1.7.jar"/>
   <classpathentry kind="lib" path="/Users/deepakchoudhary/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>

@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@290fb533[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7d586725[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -272,19 +272,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->com.typesafe.akka#akka-camel_2.10;2.3.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-camel_2.10;2.3.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-camel_2.10;2.3.6 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/com.typesafe.akka/akka-camel_2.10/2.3.6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.typesafe.akka#akka-camel_2.10;2.3.6[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.typesafe.akka#akka-camel_2.10;2.3.6[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom (2.3.6)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-camel_2.10;2.3.6!akka-camel_2.10.pom(pom.original) (579ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/com.typesafe.akka/akka-camel_2.10/2.3.6/jars/akka-camel_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-camel_2.10;2.3.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-camel_2.10;2.3.6[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.akka#akka-camel_2.10;2.3.6[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-camel_2.10;2.3.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->com.typesafe.akka#akka-camel_2.10;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->com.typesafe.akka#akka-camel_2.10;2.3.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-camel_2.10;2.3.6->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
@@ -298,19 +288,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-camel_2.10;2.3.6->com.typesafe.akka#akka-slf4j_2.10;2.3.6 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-slf4j_2.10;2.3.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-slf4j_2.10;2.3.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/com.typesafe.akka/akka-slf4j_2.10/2.3.6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.typesafe.akka#akka-slf4j_2.10;2.3.6[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.typesafe.akka#akka-slf4j_2.10;2.3.6[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom (2.3.6)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-slf4j_2.10;2.3.6!akka-slf4j_2.10.pom(pom.original) (601ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/com.typesafe.akka/akka-slf4j_2.10/2.3.6/jars/akka-slf4j_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-slf4j_2.10;2.3.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-slf4j_2.10;2.3.6[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.akka#akka-slf4j_2.10;2.3.6[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-slf4j_2.10;2.3.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-camel_2.10;2.3.6->com.typesafe.akka#akka-slf4j_2.10;2.3.6 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-slf4j_2.10;2.3.6->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-slf4j_2.10;2.3.6->org.scala-lang#scala-library;2.11.1 [compile->master(*)][0m
@@ -374,6 +354,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.sun.xml.bind#jaxb-impl;2.2.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.bind#jaxb-impl;2.2.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.sun.xml.bind#jaxb-impl;2.2.7[0m
@@ -382,6 +363,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.sun.xml.bind#jaxb-core;2.2.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.bind#jaxb-core;2.2.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.sun.xml.bind#jaxb-core;2.2.7[0m
@@ -390,6 +372,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving javax.xml.bind#jaxb-api;2.2.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.xml.bind#jaxb-api;2.2.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.xml.bind#jaxb-api;2.2.7[0m
@@ -398,6 +381,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.sun.istack#istack-commons-runtime;2.16 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.istack#istack-commons-runtime;2.16 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.sun.istack#istack-commons-runtime;2.16[0m
@@ -410,6 +394,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.sun.xml.fastinfoset#FastInfoset;1.2.12 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.fastinfoset#FastInfoset;1.2.12 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.sun.xml.fastinfoset#FastInfoset;1.2.12[0m
@@ -424,6 +409,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving javax.xml.bind#jsr173_api;1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.xml.bind#jsr173_api;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.xml.bind#jsr173_api;1.0[0m
@@ -455,6 +441,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.ccil.cowan.tagsoup#tagsoup;1.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/org.ccil.cowan.tagsoup/tagsoup/1.2/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.ccil.cowan.tagsoup#tagsoup;1.2[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.ccil.cowan.tagsoup#tagsoup;1.2[0m
+[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom (1.2)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.ccil.cowan.tagsoup#tagsoup;1.2!tagsoup.pom(pom.original) (335ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/org.ccil.cowan.tagsoup/tagsoup/1.2/jars/tagsoup.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar[0m
+[0m[[0mdebug[0m] [0m	found org.ccil.cowan.tagsoup#tagsoup;1.2 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [compile][0m
@@ -681,19 +686,27 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.2 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->compile(*)][0m
@@ -701,7 +714,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -711,7 +726,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
@@ -734,6 +751,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [runtime][0m
@@ -961,23 +982,35 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.2 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->compile(*)][0m
@@ -985,8 +1018,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -996,8 +1032,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
@@ -1020,6 +1059,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.scalatest#scalatest_2.11;2.1.7 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.1.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.1.7 {test=[default(compile)]}[0m
@@ -1310,27 +1353,43 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.2 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->compile(*)][0m
@@ -1338,9 +1397,13 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -1350,9 +1413,13 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
@@ -1375,6 +1442,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -1604,27 +1675,43 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.2 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->compile(*)][0m
@@ -1632,9 +1719,13 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -1644,9 +1735,13 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
@@ -1669,6 +1764,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for ftdataproject#ftdataproject_2.11;1.0 [test-internal][0m
@@ -1898,35 +1997,59 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-core;2.14.0->com.sun.xml.bind#jaxb-impl;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.bind#jaxb-core;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->javax.xml.bind#jaxb-api;2.2.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.2 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-core;2.2.7->com.sun.istack#istack-commons-runtime;2.16 [compile->compile(*)][0m
@@ -1934,11 +2057,17 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.bind#jaxb-impl;2.2.7->com.sun.xml.fastinfoset#FastInfoset;1.2.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -1948,11 +2077,17 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[default(compile)]} => dependency: org.slf4j#slf4j-api;1.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.ccil.cowan.tagsoup#tagsoup;1.2 {compile=[default(compile)]} => dependency: org.ccil.cowan.tagsoup#tagsoup;1.2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.camel#camel-scala;2.14.0->org.apache.camel#camel-core;2.14.0 [runtime->compile][0m
@@ -1975,6 +2110,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.sun.xml.fastinfoset#FastInfoset;1.2.12->javax.xml.bind#jsr173_api;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.apache.camel#camel-scala;2.14.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.ccil.cowan.tagsoup#tagsoup;1.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.scalatest#scalatest_2.11;2.1.7 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.scalatest#scalatest_2.11;2.1.7 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ftdataproject#ftdataproject_2.11;1.0->org.scalatest#scalatest_2.11;2.1.7 [test->compile][0m
@@ -2102,13 +2241,14 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.2!logback-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.2!logback-classic.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.6!akka-actor_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/typesafe/akka/akka-camel_2.10/2.3.6/akka-camel_2.10-2.3.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-camel_2.10;2.3.6!akka-camel_2.10.jar (1526ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-camel_2.10;2.3.6!akka-camel_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.camel#camel-scala;2.14.0!camel-scala.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.ccil.cowan.tagsoup#tagsoup;1.2!tagsoup.jar (438ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mongodb#casbah-commons_2.11;2.7.3!casbah-commons_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mongodb#casbah-core_2.11;2.7.3!casbah-core_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mongodb#casbah-query_2.11;2.7.3!casbah-query_2.11.jar[0m
@@ -2118,19 +2258,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] joda-time#joda-time;2.3!joda-time.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.joda#joda-convert;1.2!joda-convert.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-slf4j_2.10;2.3.6!akka-slf4j_2.10.jar (607ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/deepakchoudhary/.ivy2/local/org.apache.camel/camel-core/2.14.0/jars/camel-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/camel/camel-core/2.14.0/camel-core-2.14.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.camel#camel-core;2.14.0!camel-core.jar (25720ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.10;2.3.6!akka-slf4j_2.10.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.camel#camel-core;2.14.0!camel-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.sun.xml.bind#jaxb-impl;2.2.7!jaxb-impl.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.sun.xml.bind#jaxb-core;2.2.7!jaxb-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.sun.xml.fastinfoset#FastInfoset;1.2.12!FastInfoset.jar[0m
@@ -2143,7 +2272,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.1!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3170ms :: artifacts dl 27876ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2685ms :: artifacts dl 460ms[0m
 [0m[[0mdebug[0m] [0m	report for ftdataproject#ftdataproject_2.11;1.0 compile produced in /Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/resolution-cache/reports/ftdataproject-ftdataproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for ftdataproject#ftdataproject_2.11;1.0 runtime produced in /Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/resolution-cache/reports/ftdataproject-ftdataproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for ftdataproject#ftdataproject_2.11;1.0 test produced in /Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/resolution-cache/reports/ftdataproject-ftdataproject_2.11-test.xml[0m
@@ -2158,5 +2287,5 @@
 [0m[[0mdebug[0m] [0m	report for ftdataproject#ftdataproject_2.11;1.0 pom produced in /Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/resolution-cache/reports/ftdataproject-ftdataproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0mcircular dependency found: org.scala-lang#scala-compiler;2.11.1->org.scala-lang.modules#scala-xml_2.11;1.0.2->...[0m
 [0m[[0mdebug[0m] [0m	report for ftdataproject#ftdataproject_2.11;1.0 scala-tool produced in /Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/resolution-cache/reports/ftdataproject-ftdataproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3170ms resolve - 27876ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2685ms resolve - 460ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

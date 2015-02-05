@@ -4,6 +4,7 @@ import scala.util._
 import java.text.SimpleDateFormat
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import util.control.Breaks._
 
 object FileParser extends Parameters {
 
@@ -37,12 +38,24 @@ def fmt(v: Any): String = v match {
 	case b : BigDecimal => "%.3f" format b
 	case _ => " "
 	}
+/*implicit class LogTry[A](res : Try[A]) {
+  def log() = res match {
+    //case Success(s) => s
+    case Failure(f) => FileParserlogger.error(f.getMessage())
+  }
+}*/
+
+def exchangelookup(s :String): Try[String] = Try(exchange_currency_map(s))
 
 def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 
 	import com.DC.FTDataParser.XMLPersister._
 	XMLPersisterlogger.info("Fetching Currency Pairs")
-	val nodes = getXML
+	//val nodes = getXML.right
+	
+	val nodes = getXML(ccyurl,3) match {case Success(nodes) => nodes }
+	
+	
 	XMLPersisterlogger.info("Testing USD GBP Currency Pair {}", getexchange(nodes,"GBP"))
 	XMLPersisterlogger.info("Extracting Currency Complete")
 	
@@ -66,16 +79,21 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 	var count = 0
 	for ( line <- bufferedSource.getLines) {
 			
-	
+			
 			val Cols = line.split("\\|").map(_.trim)
 			
 			// Static Array Sequence 
+			
+			exchangelookup(Cols(0).takeRight(3)) match { case Failure(x) => FileParserlogger.error("Issue with exchange rate map. Check error message {}", x.getMessage())
+			case _ => None }
 			
 			val static  = Array(Cols(0), //Symbol 0
 							   Cols(1), // Date  1
 							   dir,     //Country 2
 							   Cols(0).takeRight(3), //Exchange 3
-							   exchange_currency_map(Cols(0).takeRight(3)), //ExchangeCurrency 4
+							   //exchange_currency_map(Cols(0).takeRight(3)), //ExchangeCurrency 4
+							   exchangelookup(Cols(0).takeRight(3)) match {case Success(x) => x} , //ExchangeCurrency 4
+							   
 							   Cols(2), //RIC 5
 							   Cols(3), //IssueName 6
 							   Cols(16), //Market Capitalization Currency 7
@@ -86,7 +104,7 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 							   Cols(42) //Company Website 12
 							   ) 	
 			
-			val fxconversion = fxconvertor(getexchange(nodes,static(10)),getexchange(nodes,if (static(4) == "GBX") "GBP" else static(4)))
+			val fxconversion = fxconvertor(getexchange(nodes,static(10)),getexchange(nodes, exchange_to_real_ccy_map.getOrElse(static(4),static(4))))
 			//logger.info("fxconversion {} ", fxconversion)
 			val dynamic = Array(
 								exphandler(BigDecimal(Cols(4))/adjust_currency_map(static(4))),  //Closing Price 0

@@ -26,6 +26,7 @@ trait Parameters {
     "Norway" -> "_OSLOAllShare.csv",
     "Spain" -> "_IBEX35.csv",
     "Portugal" -> "_PSI20.csv",
+    "SouthAfrica" -> "_JSE40.csv",
     "USA" -> "_NYQ_NSQ.csv",
     "Canada" -> "_TSX60.csv",
     "LATAM" -> "_LATAM40.csv")
@@ -41,6 +42,7 @@ val exchange_currency_map = Map(
     "NSI" -> "INR",
     "MIL" -> "EUR",
     "VTX" -> "CHF",
+    "SWX" -> "CHF",
     "GER" -> "EUR",
     "PAR" -> "EUR",
     "STO" -> "SEK",
@@ -54,16 +56,24 @@ val exchange_currency_map = Map(
     "LIS" -> "EUR",
     "NSQ" -> "USD",
     "NYQ" -> "USD",
+    "NAQ" -> "USD",
     "TOR" -> "CAD",
     "SAO" -> "BRL",
     "MEX" -> "MXN",
-    "SGO" -> "CLP")
+    "SGO" -> "CLP",
+    "JNB" -> "ZAX")
     
     
 val adjust_currency_map = Map(
-    "GBX" -> 100
-    
+   "GBX" -> 100,
+   "ZAX" -> 100
     ).withDefaultValue(1)     
 
+val exchange_to_real_ccy_map = Map(
+	"GBX" -> "GBP",
+	"ZAX" -> "ZAR"
+)
+
+val ccyurl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22)&env=store://datatables.org/alltableswithkeys"
   
 }

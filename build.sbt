@@ -1,5 +1,7 @@
 import AssemblyKeys._
 
+//assemblyJarName in assembly := "FTDataProject.jar"
+
 name := "FTDataProject"
 
 version := "1.0"
@@ -24,10 +26,11 @@ libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.3.6"
 libraryDependencies += "com.typesafe.akka" % "akka-camel_2.10" % "2.3.6"
 
 libraryDependencies += "org.apache.camel" % "camel-scala" % "2.14.0"               
-                            
+
+libraryDependencies += "org.ccil.cowan.tagsoup" % "tagsoup" % "1.2"                            
 
 
-mainClass in assembly := Some("my.main.Class")
+mainClass in assembly := Some("com.DC.FTDataParser.MainApp")
                             
 
 

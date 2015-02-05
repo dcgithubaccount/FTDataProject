@@ -4,7 +4,7 @@
 		module="ftdataproject_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20141116163928"
+		publication="20150121222446"
 	>
 		<description>
 		FTDataProject
@@ -43,5 +43,6 @@
 		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.3.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-camel_2.10" rev="2.3.6" conf="compile->default(compile)"/>
 		<dependency org="org.apache.camel" name="camel-scala" rev="2.14.0" conf="compile->default(compile)"/>
+		<dependency org="org.ccil.cowan.tagsoup" name="tagsoup" rev="1.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
