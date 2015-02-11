@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mRunning com.DC.FTDataParser.MainApp SouthAfrica 20141126[0m
+[0m[[0minfo[0m] [0mRunning com.DC.FTDataParser.MainApp [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/Desktop/eclipse/Workspace/FTDataProject/target/scala-2.11/classes[0m
@@ -27,15 +27,14 @@
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars/istack-commons-runtime-2.16.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars/FastInfoset-1.2.12.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/javax.xml.bind/jsr173_api/jars/jsr173_api-1.0.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
+[0m[[0mdebug[0m] [0m	/Users/deepakchoudhary/.ivy2/cache/org.ccil.cowan.tagsoup/tagsoup/jars/tagsoup-1.2.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-2 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-2 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mNot interrupting system thread Thread[Keep-Alive-Timer,8,system][0m
-[0m[[0mdebug[0m] [0mInterrupting thread MongoCleaner1248008159[0m
-[0m[[0mdebug[0m] [0m	Interrupted MongoCleaner1248008159[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
 [0m[[0mdebug[0m] [0mInterrupting thread cluster-1-localhost:27017[0m
 [0m[[0mdebug[0m] [0m	Interrupted cluster-1-localhost:27017[0m
+[0m[[0mdebug[0m] [0mNot interrupting system thread Thread[Keep-Alive-Timer,8,system][0m
+[0m[[0mdebug[0m] [0mInterrupting thread MongoCleaner633340062[0m
+[0m[[0mdebug[0m] [0m	Interrupted MongoCleaner633340062[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

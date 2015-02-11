@@ -84,16 +84,16 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 			
 			// Static Array Sequence 
 			
-			exchangelookup(Cols(0).takeRight(3)) match { case Failure(x) => FileParserlogger.error("Issue with exchange rate map. Check error message {}", x.getMessage())
-			case _ => None }
+			
 			
 			val static  = Array(Cols(0), //Symbol 0
 							   Cols(1), // Date  1
 							   dir,     //Country 2
 							   Cols(0).takeRight(3), //Exchange 3
 							   //exchange_currency_map(Cols(0).takeRight(3)), //ExchangeCurrency 4
-							   exchangelookup(Cols(0).takeRight(3)) match {case Success(x) => x} , //ExchangeCurrency 4
-							   
+							   //exchangelookup(Cols(0).takeRight(3)) match {case Success(x) => x} , //ExchangeCurrency 4
+							   exchangelookup(Cols(0).takeRight(3)) match { case Failure(x) => FileParserlogger.error("Issue with exchange rate map. Check error message!!!! {}", x.getMessage())
+							   case Success(x) => x  }, //ExchangeCurrency 4
 							   Cols(2), //RIC 5
 							   Cols(3), //IssueName 6
 							   Cols(16), //Market Capitalization Currency 7
@@ -104,16 +104,16 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 							   Cols(42) //Company Website 12
 							   ) 	
 			
-			val fxconversion = fxconvertor(getexchange(nodes,static(10)),getexchange(nodes, exchange_to_real_ccy_map.getOrElse(static(4),static(4))))
+			val fxconversion = fxconvertor(getexchange(nodes,static(10).toString),getexchange(nodes, exchange_to_real_ccy_map.getOrElse(static(4).toString,static(4).toString)))
 			//logger.info("fxconversion {} ", fxconversion)
 			val dynamic = Array(
-								exphandler(BigDecimal(Cols(4))/adjust_currency_map(static(4))),  //Closing Price 0
-								exphandler(BigDecimal(Cols(5))/adjust_currency_map(static(4))), //Open price 1
-								exphandler(BigDecimal(Cols(6))/adjust_currency_map(static(4))), //Day High Price 2
-								exphandler(BigDecimal(Cols(7))/adjust_currency_map(static(4))), //Day Low Price 3
-								exphandler(BigDecimal(Cols(8))/adjust_currency_map(static(4))), //Previous Closing Price 4
-	 							exphandler(BigDecimal(Cols(9))/adjust_currency_map(static(4))), //Bid Price 5
-								exphandler(BigDecimal(Cols(10))/adjust_currency_map(static(4))), //Offer Price 6
+								exphandler(BigDecimal(Cols(4))/adjust_currency_map(static(4).toString)),  //Closing Price 0
+								exphandler(BigDecimal(Cols(5))/adjust_currency_map(static(4).toString)), //Open price 1
+								exphandler(BigDecimal(Cols(6))/adjust_currency_map(static(4).toString)), //Day High Price 2
+								exphandler(BigDecimal(Cols(7))/adjust_currency_map(static(4).toString)), //Day Low Price 3
+								exphandler(BigDecimal(Cols(8))/adjust_currency_map(static(4).toString)), //Previous Closing Price 4
+	 							exphandler(BigDecimal(Cols(9))/adjust_currency_map(static(4).toString)), //Bid Price 5
+								exphandler(BigDecimal(Cols(10))/adjust_currency_map(static(4).toString)), //Offer Price 6
 								exphandler(fmt(stringconvertor(Cols(11)))), //Average Volume 7
 								exphandler(fmt(stringconvertor(Cols(12)))), //Shares Outstanding 8
 								exphandler(fmt(stringconvertor(Cols(13)))), //Free Float 9
@@ -122,9 +122,9 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 								exphandler(fmt(stringconvertor(Cols(19)))), //Annual Dividend 12
 								exphandler(sdf.format(sf.parse(Cols(22)))), // Dividend Ex Date 13
 								exphandler(sdf.format(sf.parse(Cols(23)))), // Dividend Pay Date 14
-								exphandler(BigDecimal(Cols(24))/adjust_currency_map(static(4))), //YearLowPrice 15
+								exphandler(BigDecimal(Cols(24))/adjust_currency_map(static(4).toString)), //YearLowPrice 15
 								exphandler(sdf.format(sf.parse(Cols(25)))), //YearLowDate 16
-								exphandler(BigDecimal(Cols(26))/adjust_currency_map(static(4))), //YearHighPrice 17
+								exphandler(BigDecimal(Cols(26))/adjust_currency_map(static(4).toString)), //YearHighPrice 17
 								exphandler(sdf.format(sf.parse(Cols(27)))), //YearHighDate 18
 								exphandler(Cols(29)), //Year of Annual Report 19
 								exphandler(fmt(stringconvertor(Cols(30)))), //Balance Sheet Total Assets 20
