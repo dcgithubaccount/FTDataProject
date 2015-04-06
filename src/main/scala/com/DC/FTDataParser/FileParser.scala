@@ -38,22 +38,17 @@ def fmt(v: Any): String = v match {
 	case b : BigDecimal => "%.3f" format b
 	case _ => " "
 	}
-/*implicit class LogTry[A](res : Try[A]) {
-  def log() = res match {
-    //case Success(s) => s
-    case Failure(f) => FileParserlogger.error(f.getMessage())
-  }
-}*/
 
-def exchangelookup(s :String): Try[String] = Try(exchange_currency_map(s))
 
+def exchangelookup(s :String): Try[String] = Try (exchange_currency_map(s))
+  
 def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 
 	import com.DC.FTDataParser.XMLPersister._
 	XMLPersisterlogger.info("Fetching Currency Pairs")
 	//val nodes = getXML.right
 	
-	val nodes = getXML(ccyurl,3) match {case Success(nodes) => nodes }
+	val nodes = getXML(ccyurl,6) match {case Success(nodes) => nodes }
 	
 	
 	XMLPersisterlogger.info("Testing USD GBP Currency Pair {}", getexchange(nodes,"GBP"))
@@ -75,7 +70,7 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 	val multiarray = Array.ofDim[Any](filesize,53)
 	
 	FileParserlogger.info("Start Line Parsing")
-	//FileParserlogger.info("Symbol,Date,Country,Exchange,ExchangeCurrency,RIC,IssueName,MarketCapCCY,EPSCurrency,AnnualDivCurency,AnnualReportCurrency,Industry,CompanyWebsite,ClosePrice,OpenPrice,DayHigh,DayLow,PreviousClosePrice,BidPrice,OfferPrice,AverageVolume,SharesOutstanding,FreeFloat,MarketCap,EPS,AnnualDivi,DiviExDate,DiviPayDate,YearLowPrice,YearLowDate,YearHighPrice,YearHighDate,AnnualReportYear")
+	
 	var count = 0
 	for ( line <- bufferedSource.getLines) {
 			
@@ -92,8 +87,8 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 							   Cols(0).takeRight(3), //Exchange 3
 							   //exchange_currency_map(Cols(0).takeRight(3)), //ExchangeCurrency 4
 							   //exchangelookup(Cols(0).takeRight(3)) match {case Success(x) => x} , //ExchangeCurrency 4
-							   exchangelookup(Cols(0).takeRight(3)) match { case Failure(x) => FileParserlogger.error("Issue with exchange rate map. Check error message!!!! {}", x.getMessage())
-							   case Success(x) => x  }, //ExchangeCurrency 4
+							   exchangelookup(Cols(0).takeRight(3)) match { case Failure(x) => FileParserlogger.error("Issue with exchange rate map. Check error message!!!! {}", x.getMessage() ); Cols(16)
+							   case Success(x) => x  }  , //ExchangeCurrency 4
 							   Cols(2), //RIC 5
 							   Cols(3), //IssueName 6
 							   Cols(16), //Market Capitalization Currency 7

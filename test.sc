@@ -50,33 +50,33 @@ import scala.xml._
 import java.net._
 import scala.io.Source
 val temp = XML.loadString(Source.fromURL(new URL("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quote%20where%20symbol%20in%20(%22%5EFTSE%22,%22%5EGDAXI%22,%22%5EFCHI%22,%22FTSEMIB.MI%22,%22%5EAEX%22,%22OMXC20.CO%22,%22%5EOMX%22,%22%5EOSEAX%22,%22%5ESSMI%22,%22%5EBFX%22)&diagnostics=true&env=store://datatables.org/alltableswithkeys")).mkString)
-                                                  //> temp  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-02-0
-                                                  //| 2T00:42:53Z" yahoo:count="10" xmlns:yahoo="http://www.yahooapis.com/v1/base
-                                                  //| .rng"><diagnostics><url execution-time="1" execution-stop-time="2" executio
-                                                  //| n-start-time="1">http://www.datatables.org/yahoo/finance/quote/yahoo.financ
+                                                  //> temp  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-03-2
+                                                  //| 8T23:48:20Z" yahoo:count="10" xmlns:yahoo="http://www.yahooapis.com/v1/base
+                                                  //| .rng"><diagnostics><url execution-time="1" execution-stop-time="1" executio
+                                                  //| n-start-time="0">http://www.datatables.org/yahoo/finance/quote/yahoo.financ
                                                   //| e.quote.xml</url><publiclyCallable>true</publiclyCallable><cache type="MEMC
                                                   //| ACHED" method="GET" execution-time="1" execution-stop-time="6" execution-st
-                                                  //| art-time="5">5d1e1de680846a307c9874dc3d6878dc</cache><url execution-time="6
-                                                  //| " execution-stop-time="12" execution-start-time="6">http://download.finance
-                                                  //| .yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6
-                                                  //| ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1
-                                                  //| t7t8vv1v7ww1w4xy&amp;s=%5EFTSE,%5EGDAXI,%5EFCHI,FTSEMIB.MI,%5EAEX,OMXC20.CO
-                                                  //| ,%5EOMX,%5EOSEAX,%5ESSMI,%5EBFX</url><query params="{url=[http://download.f
-                                                  //| inance.yahoo.com/d/quot
+                                                  //| art-time="5">5d1e1de680846a307c9874dc3d6878dc</cache><url execution-time="2
+                                                  //| 2" execution-stop-time="29" execution-start-time="7">http://download.financ
+                                                  //| e.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g
+                                                  //| 6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t
+                                                  //| 1t7t8vv1v7ww1w4xy&amp;s=%5EFTSE,%5EGDAXI,%5EFCHI,FTSEMIB.MI,%5EAEX,OMXC20.C
+                                                  //| O,%5EOMX,%5EOSEAX,%5ESSMI,%5EBFX</url><query params="{url=[http://download.
+                                                  //| finance.yahoo.com/d/quo
                                                   //| Output exceeds cutoff limit.
 val result = temp \ "results" \ "quote"           //> result  : scala.xml.NodeSeq = NodeSeq(<quote symbol="^FTSE" xmlns:yahoo="ht
-                                                  //| tp://www.yahooapis.com/v1/base.rng"><AverageDailyVolume>0</AverageDailyVolu
-                                                  //| me><Change>-61.20</Change><DaysLow>6749.40</DaysLow><DaysHigh>6843.98</Days
-                                                  //| High><YearLow>6072.68</YearLow><YearHigh>6904.86</YearHigh><MarketCapitaliz
-                                                  //| ation/><LastTradePriceOnly>6749.40</LastTradePriceOnly><DaysRange>6749.40 -
-                                                  //|  6843.98</DaysRange><Name>FTSE 100</Name><Symbol>^FTSE</Symbol><Volume>0</V
-                                                  //| olume><StockExchange>FSI</StockExchange></quote>, <quote symbol="^GDAXI" xm
-                                                  //| lns:yahoo="http://www.yahooapis.com/v1/base.rng"><AverageDailyVolume>0</Ave
-                                                  //| rageDailyVolume><Change>-43.55</Change><DaysLow>10642.59</DaysLow><DaysHigh
-                                                  //| >10804.04</DaysHigh><YearLow>8354.97</YearLow><YearHigh>10810.60</YearHigh>
-                                                  //| <MarketCapitalization/><LastTradePriceOnly>10694.32</LastTradePriceOnly><Da
-                                                  //| ysRange>10642.59 - 10804.04</DaysRange><Name>DAX</Name><Symbol>^GDAXI</Symb
-                                                  //| ol><Volume>0</Volume><S
+                                                  //| tp://www.yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>-40.31</Ch
+                                                  //| ange><DaysLow>6839.88</DaysLow><DaysHigh>6910.55</DaysHigh><YearLow>6072.70
+                                                  //| </YearLow><YearHigh>7065.10</YearHigh><MarketCapitalization/><LastTradePric
+                                                  //| eOnly>6855.02</LastTradePriceOnly><DaysRange>6839.88 - 6910.55</DaysRange><
+                                                  //| Name>FTSE 100</Name><Symbol>^FTSE</Symbol><Volume>0</Volume><StockExchange>
+                                                  //| FSI</StockExchange></quote>, <quote symbol="^GDAXI" xmlns:yahoo="http://www
+                                                  //| .yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>+24.65</Change><Da
+                                                  //| ysLow>11799.03</DaysLow><DaysHigh>11954.09</DaysHigh><YearLow>8354.97</Year
+                                                  //| Low><YearHigh>12219.00</YearHigh><MarketCapitalization/><LastTradePriceOnly
+                                                  //| >11868.33</LastTradePriceOnly><DaysRange>11799.03 - 11954.09</DaysRange><Na
+                                                  //| me>DAX</Name><Symbol>^GDAXI</Symbol><Volume>0</Volume><StockExchange>GER</S
+                                                  //| tockExchange></quote>, 
                                                   //| Output exceeds cutoff limit.
 
 case class Index(val Symbol : String,
@@ -105,39 +105,38 @@ val Name       =  (n \ "Name").text
 val Volume     =  (n \ "Volume").text
 val StockExchange = (n \ "StockExchange").text
 Index(Symbol,Change,DaysLow,DaysHigh,YearLow,YearHigh,LastTradePriceOnly,DaysRange,Name,Volume ,StockExchange)
-}                                                 //> index  : scala.collection.immutable.Seq[test.Index] = List(Index(^FTSE,-61.
-                                                  //| 20,6749.40,6843.98,6072.68,6904.86,6749.40,6749.40 - 6843.98,FTSE 100,0,FSI
-                                                  //| ), Index(^GDAXI,-43.55,10642.59,10804.04,8354.97,10810.60,10694.32,10642.59
-                                                  //|  - 10804.04,DAX,0,XETRA), Index(^FCHI,-27.18,4583.68,4660.71,3789.11,4679.2
-                                                  //| 6,4604.25,4583.68 - 4660.71,CAC 40,0,Paris), Index(FTSEMIB.MI,-90.340,20411
-                                                  //| .020,20723.221,18079.000,22216.600,20503.381,20411.020 - 20723.221,FTSE MIB
-                                                  //| ,0,Milan), Index(^AEX,-2.08,448.90,454.65,366.84,459.44,450.39,448.90 - 454
-                                                  //| .65,AEX,7263,Amsterdam), Index(OMXC20.CO,-4.383,810.938,824.931,624.165,773
-                                                  //| .539,810.938,810.938 - 824.931,OMX COPENHAGEN,0,Copenhagen), Index(^OMX,+3.
-                                                  //| 234,1572.551,1582.104,1269.91,1478.93,1573.622,1572.551 - 1582.104,OMXS30,0
-                                                  //| ,Stockholm), Index(^OSEAX,-0.45,633.00,640.21,571.50,706.45,635.71,633.00 -
-                                                  //|  640.21,OSLO EXCH ALL SHA,0,Oslo), Index(^SSMI,-50.21,8385.13,8493.05,7852.
-                                                  //| 80,9291.00,8385.13,8385
+}                                                 //> index  : scala.collection.immutable.Seq[test.Index] = List(Index(^FTSE,-40.
+                                                  //| 31,6839.88,6910.55,6072.70,7065.10,6855.02,6839.88 - 6910.55,FTSE 100,0,FSI
+                                                  //| ), Index(^GDAXI,+24.65,11799.03,11954.09,8354.97,12219.00,11868.33,11799.03
+                                                  //|  - 11954.09,DAX,0,GER), Index(^FCHI,+27.71,5003.31,5048.37,3789.11,5106.04,
+                                                  //| 5034.06,5003.31 - 5048.37,CAC 40,0,PAR), Index(FTSEMIB.MI,+83.96,22775.37,2
+                                                  //| 3048.06,18079.00,23048.06,22984.23,22775.37 - 23048.06,FTSE MIB,0,MIL), Ind
+                                                  //| ex(^AEX,-0.64,483.44,488.60,366.84,500.66,485.73,483.44 - 488.60,AEX,7263,A
+                                                  //| MS), Index(OMXC20.CO,+45.00,901.35,957.35,669.12,957.35,945.62,901.35 - 957
+                                                  //| .35,OMX COPENHAGEN,0,CPH), Index(^OMX,-13.04,1662.31,1681.62,1269.91,1691.0
+                                                  //| 3,1662.56,1662.31 - 1681.62,OMXS30,0,STO), Index(^OSEAX,+2.99,658.76,664.06
+                                                  //| ,571.50,706.45,661.76,658.76 - 664.06,OSLO EXCH ALL SHARE,0,OSL), Index(^SS
+                                                  //| MI,+1.01,9072.64,9159.93,7852.80,9397.20,9083.52,9072.64 - 9159.93,SMI,0,VT
+                                                  //| X), Index(^BFX,+19.00,3
                                                   //| Output exceeds cutoff limit.
 
 //index.tail.tail.tail.head.Symbol
 
 for ( i <- index) {
 println(i.Symbol,i.Name, i.StockExchange,i.LastTradePriceOnly,i.Change,i.Volume,i.DaysLow,i.DaysHigh,i.YearLow,i.YearHigh)
-                                                  //> (^FTSE,FTSE 100,FSI,6749.40,-61.20,0,6749.40,6843.98,6072.68,6904.86)
-                                                  //| (^GDAXI,DAX,XETRA,10694.32,-43.55,0,10642.59,10804.04,8354.97,10810.60)
-                                                  //| (^FCHI,CAC 40,Paris,4604.25,-27.18,0,4583.68,4660.71,3789.11,4679.26)
-                                                  //| (FTSEMIB.MI,FTSE MIB,Milan,20503.381,-90.340,0,20411.020,20723.221,18079.00
-                                                  //| 0,22216.600)
-                                                  //| (^AEX,AEX,Amsterdam,450.39,-2.08,7263,448.90,454.65,366.84,459.44)
-                                                  //| (OMXC20.CO,OMX COPENHAGEN,Copenhagen,810.938,-4.383,0,810.938,824.931,624.1
-                                                  //| 65,773.539)
-                                                  //| (^OMX,OMXS30,Stockholm,1573.622,+3.234,0,1572.551,1582.104,1269.91,1478.93)
+                                                  //> (^FTSE,FTSE 100,FSI,6855.02,-40.31,0,6839.88,6910.55,6072.70,7065.10)
+                                                  //| (^GDAXI,DAX,GER,11868.33,+24.65,0,11799.03,11954.09,8354.97,12219.00)
+                                                  //| (^FCHI,CAC 40,PAR,5034.06,+27.71,0,5003.31,5048.37,3789.11,5106.04)
+                                                  //| (FTSEMIB.MI,FTSE MIB,MIL,22984.23,+83.96,0,22775.37,23048.06,18079.00,23048
+                                                  //| .06)
+                                                  //| (^AEX,AEX,AMS,485.73,-0.64,7263,483.44,488.60,366.84,500.66)
+                                                  //| (OMXC20.CO,OMX COPENHAGEN,CPH,945.62,+45.00,0,901.35,957.35,669.12,957.35)
+                                                  //| (^OMX,OMXS30,STO,1662.56,-13.04,0,1662.31,1681.62,1269.91,1691.03)
+                                                  //| (^OSEAX,OSLO EXCH ALL SHARE,OSL,661.76,+2.99,0,658.76,664.06,571.50,706.45)
                                                   //| 
-                                                  //| (^OSEAX,OSLO EXCH ALL SHA,Oslo,635.71,-0.45,0,633.00,640.21,571.50,706.45)
-                                                  //| (^SSMI,SMI,VTX,8385.13,-50.21,0,8385.13,8493.05,7852.80,9291.00)
-                                                  //| (^BFX,EURONEXT BEL-20,Brussels,3529.00,-2.00,3,3524.00,3560.00,2809.31,3565
-                                                  //| .83)
+                                                  //| (^SSMI,SMI,VTX,9083.52,+1.01,0,9072.64,9159.93,7852.80,9397.20)
+                                                  //| (^BFX,EURONEXT BEL-20,BRU,3715.00,+19.00,3,3709.00,3720.00,2809.31,3786.10)
+                                                  //| 
 }
 /*result.foreach {
 n =>
@@ -158,146 +157,143 @@ println(s"$Symbol",s"$Volume",s"$StockExchange",s"$DaysLow",s"$DaysHigh",s"$Year
 }
 
 */
+val init = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20("
+                                                  //> init  : String = http://query.yahooapis.com/v1/public/yql?q=select%20*%20fr
+                                                  //| om%20yahoo.finance.xchange%20where%20pair%20in%20(
+val last = ")&env=store://datatables.org/alltableswithkeys"
+                                                  //> last  : String = )&env=store://datatables.org/alltableswithkeys
+val ccy = Array("AED",	"AFN",	"ALL",	"AMD",	"ANG",	"AOA",	"ARS",	"AUD",	"AWG",	"AZN",	"BAM",	"BBD",	"BDT",	"BGN",	"BHD",	"BIF",	"BMD",	"BND",	"BOB",	"BRL",	"BSD",	"BTC",	"BTN",	"BWP",	"BYR",	"BZD",	"CAD",	"CDF",	"CHF",	"CLF",	"CLP",	"CNY",	"COP",	"CRC",	"CUC",	"CUP",	"CVE",	"CZK",	"DJF",	"DKK",	"DOP",	"DZD",	"EEK",	"EGP",	"ERN",	"ETB",	"EUR",	"FJD",	"FKP",	"GBP",	"GEL",	"GGP",	"GHS",	"GIP",	"GMD",	"GNF",	"GTQ",	"GYD",	"HKD",	"HNL",	"HRK",	"HTG",	"HUF",	"IDR",	"ILS",	"IMP",	"INR",	"IQD",	"IRR",	"ISK",	"JEP",	"JMD",	"JOD",	"JPY",	"KES",	"KGS",	"KHR",	"KMF",	"KPW",	"KRW",	"KWD",	"KYD",	"KZT",	"LAK",	"LBP",	"LKR",	"LRD",	"LSL",	"LTL",	"LVL",	"LYD",	"MAD",	"MDL",	"MGA",	"MKD",	"MMK",	"MNT",	"MOP",	"MRO",	"MTL",	"MUR",	"MVR",	"MWK",	"MXN",	"MYR",	"MZN",	"NAD",	"NGN",	"NIO",	"NOK",	"NPR",	"NZD",	"OMR",	"PAB",	"PEN",	"PGK",	"PHP",	"PKR",	"PLN",	"PYG",	"QAR",	"RON",	"RSD",	"RUB",	"RWF",	"SAR",	"SBD",	"SCR",	"SDG",	"SEK",	"SGD",	"SHP",	"SLL",	"SOS",	"SRD",	"STD",	"SVC",	"SYP",	"SZL",	"THB",	"TJS",	"TMT",	"TND",	"TOP",	"TRY",	"TTD",	"TWD",	"TZS",	"UAH",	"UGX",	"USD",	"UYU",	"UZS",	"VEF",	"VND",	"VUV",	"WST",	"XAF",	"XAG",	"XAU",	"XCD",	"XDR",	"XOF",	"XPF",	"YER",	"ZAR",	"ZMK",	"ZMW",	"ZWL")
+                                                  //> ccy  : Array[String] = Array(AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, A
+                                                  //| ZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BRL, BSD, BTC, BTN, BWP, B
+                                                  //| YR, BZD, CAD, CDF, CHF, CLF, CLP, CNY, COP, CRC, CUC, CUP, CVE, CZK, DJF, D
+                                                  //| KK, DOP, DZD, EEK, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GGP, GHS, GIP, G
+                                                  //| MD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, IMP, INR, IQD, IRR, I
+                                                  //| SK, JEP, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, L
+                                                  //| BP, LKR, LRD, LSL, LTL, LVL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRO, M
+                                                  //| TL, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, P
+                                                  //| EN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, S
+                                                  //| EK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, T
+                                                  //| RY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VEF, VND, VUV, WST, XAF, XAG, X
+                                                  //| AU, XCD, XDR, XOF, XPF, YER, ZAR, ZMK, ZMW, ZWL)
+val base = "INR"                                  //> base  : String = INR
 
-
-val xchange = XML.loadString(Source.fromURL(new URL("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22,%22USDTRY%22,%22USDCNY%22,%22USDTHB%22,%22USDIDR%22,%22USDILS%22,%22USDRUB%22)&env=store://datatables.org/alltableswithkeys")).mkString)
-                                                  //> xchange  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-0
-                                                  //| 2-02T00:42:53Z" yahoo:count="27" xmlns:yahoo="http://www.yahooapis.com/v1/b
-                                                  //| ase.rng"><results><rate id="USDAUD"><Name>USD to AUD</Name><Rate>1.2856</Ra
-                                                  //| te><Date>2/2/2015</Date><Time>7:42pm</Time><Ask>1.2858</Ask><Bid>1.2854</Bi
-                                                  //| d></rate><rate id="USDEUR"><Name>USD to EUR</Name><Rate>0.8842</Rate><Date>
-                                                  //| 2/2/2015</Date><Time>7:42pm</Time><Ask>0.8843</Ask><Bid>0.884</Bid></rate><
-                                                  //| rate id="USDCAD"><Name>USD to CAD</Name><Rate>1.2703</Rate><Date>2/2/2015</
-                                                  //| Date><Time>7:42pm</Time><Ask>1.2704</Ask><Bid>1.2702</Bid></rate><rate id="
-                                                  //| USDDKK"><Name>USD to DKK</Name><Rate>6.5837</Rate><Date>2/2/2015</Date><Tim
-                                                  //| e>7:42pm</Time><Ask>6.5868</Ask><Bid>6.5806</Bid></rate><rate id="USDHKD"><
-                                                  //| Name>USD to HKD</Name><Rate>7.7526</Rate><Date>2/2/2015</Date><Time>7:42pm<
-                                                  //| /Time><Ask>7.7532</Ask><Bid>7.7519</Bid></rate><rate id="USDINR"><Name>USD 
-                                                  //| to INR</Name><Rate>62.0
+val ccyarray = ccy map {x => "%22"+base + x + "%22"}
+                                                  //> ccyarray  : Array[String] = Array(%22INRAED%22, %22INRAFN%22, %22INRALL%22,
+                                                  //|  %22INRAMD%22, %22INRANG%22, %22INRAOA%22, %22INRARS%22, %22INRAUD%22, %22I
+                                                  //| NRAWG%22, %22INRAZN%22, %22INRBAM%22, %22INRBBD%22, %22INRBDT%22, %22INRBGN
+                                                  //| %22, %22INRBHD%22, %22INRBIF%22, %22INRBMD%22, %22INRBND%22, %22INRBOB%22, 
+                                                  //| %22INRBRL%22, %22INRBSD%22, %22INRBTC%22, %22INRBTN%22, %22INRBWP%22, %22IN
+                                                  //| RBYR%22, %22INRBZD%22, %22INRCAD%22, %22INRCDF%22, %22INRCHF%22, %22INRCLF%
+                                                  //| 22, %22INRCLP%22, %22INRCNY%22, %22INRCOP%22, %22INRCRC%22, %22INRCUC%22, %
+                                                  //| 22INRCUP%22, %22INRCVE%22, %22INRCZK%22, %22INRDJF%22, %22INRDKK%22, %22INR
+                                                  //| DOP%22, %22INRDZD%22, %22INREEK%22, %22INREGP%22, %22INRERN%22, %22INRETB%2
+                                                  //| 2, %22INREUR%22, %22INRFJD%22, %22INRFKP%22, %22INRGBP%22, %22INRGEL%22, %2
+                                                  //| 2INRGGP%22, %22INRGHS%22, %22INRGIP%22, %22INRGMD%22, %22INRGNF%22, %22INRG
+                                                  //| TQ%22, %22INRGYD%22, %22INRHKD%22, %22INRHNL%22, %22INRHRK%22, %22INRHTG%22
+                                                  //| , %22INRHUF%22, %22INRI
                                                   //| Output exceeds cutoff limit.
+val ccystring = ccyarray.mkString(",")            //> ccystring  : String = %22INRAED%22,%22INRAFN%22,%22INRALL%22,%22INRAMD%22,%
+                                                  //| 22INRANG%22,%22INRAOA%22,%22INRARS%22,%22INRAUD%22,%22INRAWG%22,%22INRAZN%2
+                                                  //| 2,%22INRBAM%22,%22INRBBD%22,%22INRBDT%22,%22INRBGN%22,%22INRBHD%22,%22INRBI
+                                                  //| F%22,%22INRBMD%22,%22INRBND%22,%22INRBOB%22,%22INRBRL%22,%22INRBSD%22,%22IN
+                                                  //| RBTC%22,%22INRBTN%22,%22INRBWP%22,%22INRBYR%22,%22INRBZD%22,%22INRCAD%22,%2
+                                                  //| 2INRCDF%22,%22INRCHF%22,%22INRCLF%22,%22INRCLP%22,%22INRCNY%22,%22INRCOP%22
+                                                  //| ,%22INRCRC%22,%22INRCUC%22,%22INRCUP%22,%22INRCVE%22,%22INRCZK%22,%22INRDJF
+                                                  //| %22,%22INRDKK%22,%22INRDOP%22,%22INRDZD%22,%22INREEK%22,%22INREGP%22,%22INR
+                                                  //| ERN%22,%22INRETB%22,%22INREUR%22,%22INRFJD%22,%22INRFKP%22,%22INRGBP%22,%22
+                                                  //| INRGEL%22,%22INRGGP%22,%22INRGHS%22,%22INRGIP%22,%22INRGMD%22,%22INRGNF%22,
+                                                  //| %22INRGTQ%22,%22INRGYD%22,%22INRHKD%22,%22INRHNL%22,%22INRHRK%22,%22INRHTG%
+                                                  //| 22,%22INRHUF%22,%22INRIDR%22,%22INRILS%22,%22INRIMP%22,%22INRINR%22,%22INRI
+                                                  //| QD%22,%22INRIRR%22,%22I
+                                                  //| Output exceeds cutoff limit.
+
+val finalurlString = init+ccystring+last          //> finalurlString  : String = http://query.yahooapis.com/v1/public/yql?q=selec
+                                                  //| t%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22INRAED%22,%2
+                                                  //| 2INRAFN%22,%22INRALL%22,%22INRAMD%22,%22INRANG%22,%22INRAOA%22,%22INRARS%22
+                                                  //| ,%22INRAUD%22,%22INRAWG%22,%22INRAZN%22,%22INRBAM%22,%22INRBBD%22,%22INRBDT
+                                                  //| %22,%22INRBGN%22,%22INRBHD%22,%22INRBIF%22,%22INRBMD%22,%22INRBND%22,%22INR
+                                                  //| BOB%22,%22INRBRL%22,%22INRBSD%22,%22INRBTC%22,%22INRBTN%22,%22INRBWP%22,%22
+                                                  //| INRBYR%22,%22INRBZD%22,%22INRCAD%22,%22INRCDF%22,%22INRCHF%22,%22INRCLF%22,
+                                                  //| %22INRCLP%22,%22INRCNY%22,%22INRCOP%22,%22INRCRC%22,%22INRCUC%22,%22INRCUP%
+                                                  //| 22,%22INRCVE%22,%22INRCZK%22,%22INRDJF%22,%22INRDKK%22,%22INRDOP%22,%22INRD
+                                                  //| ZD%22,%22INREEK%22,%22INREGP%22,%22INRERN%22,%22INRETB%22,%22INREUR%22,%22I
+                                                  //| NRFJD%22,%22INRFKP%22,%22INRGBP%22,%22INRGEL%22,%22INRGGP%22,%22INRGHS%22,%
+                                                  //| 22INRGIP%22,%22INRGMD%22,%22INRGNF%22,%22INRGTQ%22,%22INRGYD%22,%22INRHKD%2
+                                                  //| 2,%22INRHNL%22,%22INRHR
+                                                  //| Output exceeds cutoff limit.
+val xchange =  XML.loadString(Source.fromURL(new URL(finalurlString)).mkString)
+                                                  //> xchange  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-0
+                                                  //| 3-28T23:48:21Z" yahoo:count="169" xmlns:yahoo="http://www.yahooapis.com/v1/
+                                                  //| base.rng"><results><rate id="INRAED"><Name>INR/AED</Name><Rate>0.0587</Rate
+                                                  //| ><Date>3/28/2015</Date><Time>12:19pm</Time><Ask>0.0588</Ask><Bid>0.0587</Bi
+                                                  //| d></rate><rate id="INRAFN"><Name>INR/AFN</Name><Rate>0.9248</Rate><Date>3/2
+                                                  //| 8/2015</Date><Time>12:19pm</Time><Ask>0.9266</Ask><Bid>0.9248</Bid></rate><
+                                                  //| rate id="INRALL"><Name>INR/ALL</Name><Rate>2.0680</Rate><Date>3/28/2015</Da
+                                                  //| te><Time>12:19pm</Time><Ask>2.1050</Ask><Bid>2.0680</Bid></rate><rate id="I
+                                                  //| NRAMD"><Name>INR/AMD</Name><Rate>7.5425</Rate><Date>3/28/2015</Date><Time>1
+                                                  //| 2:19pm</Time><Ask>7.5436</Ask><Bid>7.5425</Bid></rate><rate id="INRANG"><Na
+                                                  //| me>INR/ANG</Name><Rate>0.0286</Rate><Date>3/28/2015</Date><Time>12:19pm</Ti
+                                                  //| me><Ask>0.0286</Ask><Bid>0.0286</Bid></rate><rate id="INRAOA"><Name>INR/AOA
+                                                  //| </Name><Rate>1.7296</Ra
+                                                  //| Output exceeds cutoff limit.
+
+
+//val ccyurl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22,%22USDTRY%22,%22USDCNY%22,%22USDTHB%22,%22USDIDR%22,%22USDILS%22,%22USDRUB%22)&env=store://datatables.org/alltableswithkeys"
+
+//val xchange = XML.loadString(Source.fromURL(new URL("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22,%22USDTRY%22,%22USDCNY%22,%22USDTHB%22,%22USDIDR%22,%22USDILS%22,%22USDRUB%22)&env=store://datatables.org/alltableswithkeys")).mkString)
 
 (xchange \ "results" \ "rate").foreach{
 n =>
 println((n \ "Name").text, (n \ "Rate").text)
-}                                                 //> (USD to AUD,1.2856)
-                                                  //| (USD to EUR,0.8842)
-                                                  //| (USD to CAD,1.2703)
-                                                  //| (USD to DKK,6.5837)
-                                                  //| (USD to HKD,7.7526)
-                                                  //| (USD to INR,62.085)
-                                                  //| (USD to JPY,117.3445)
-                                                  //| (USD to KRW,1099.40)
-                                                  //| (USD to BRL,2.6822)
-                                                  //| (USD to MXN,14.9631)
-                                                  //| (USD to CLP,634.155)
-                                                  //| (USD to PEN,3.063)
-                                                  //| (USD to COP,2440.00)
-                                                  //| (USD to NZD,1.3767)
-                                                  //| (USD to NOK,7.7266)
-                                                  //| (USD to SGD,1.3528)
-                                                  //| (USD to SEK,8.2663)
-                                                  //| (USD to CHF,0.9211)
-                                                  //| (USD to GBP,0.6632)
-                                                  //| (USD to USD,1.00)
-                                                  //| (USD to ZAR,11.6299)
-                                                  //| (USD to TRY,2.4436)
-                                                  //| (USD to CNY,6.2386)
-                                                  //| (USD to THB,32.713)
-                                                  //| (USD to IDR,12730.00)
-                                                  //| (USD to ILS,3.9367)
-                                                  //| (USD to RUB,69.6005)
-
-
-import java.net.URL
-import scala.xml.XML
-import org.xml.sax.InputSource
-import scala.xml.parsing.NoBindingFactoryAdapter
-import org.ccil.cowan.tagsoup.jaxp.SAXFactoryImpl
-import java.net.HttpURLConnection
-import scala.xml.Node
- 
-object HTML {
-  lazy val adapter = new NoBindingFactoryAdapter
-  lazy val parser = (new SAXFactoryImpl).newSAXParser
- 
-  def load(url: URL, headers: Map[String, String] = Map.empty): Node = {
-    val conn = url.openConnection().asInstanceOf[HttpURLConnection]
-    for ((k, v) <- headers)
-      conn.setRequestProperty(k, v)
-    val source = new InputSource(conn.getInputStream)
-    adapter.loadXML(source, parser)
-  }
-}
-
-
-import java.net.URL
- 
-val site = new URL("http://markets.ft.com/research/Markets/Tearsheets/Summary?s=4038993")
-                                                  //> site  : java.net.URL = http://markets.ft.com/research/Markets/Tearsheets/Su
-                                                  //| mmary?s=4038993
-  
-val content = HTML.load(site)                     //> content  : scala.xml.Node = <html lang="en"><head><meta content="IE=edge,ch
-                                                  //| rome=1" http-equiv="X-UA-Compatible"/><meta charset="UTF-8"/><title>CNX 100
-                                                  //|  Index-NSE chart, prices and performance - FT.com</title><meta content="CNX
-                                                  //|  100 Index-NSE index chart, prices and performance, plus recent news and an
-                                                  //| alysis." name="description"/><meta content="CNX 100 Index-NSE index chart, 
-                                                  //| prices and performance, plus recent news and analysis." name="keywords"/><l
-                                                  //| ink media="all" href="http://s1.ft-static.com/m/style/2d49d277/bundles/core
-                                                  //| .css" rel="stylesheet"/><link media="all" href="http://navigation.webservic
-                                                  //| es.ft.com/v1/navigation/ft/css/style.min.css" rel="stylesheet"/><link media
-                                                  //| ="all" href="http://s1.ft-static.com/m/style/5c37627a/bundles/nonArticle.cs
-                                                  //| s" rel="stylesheet"/><link rel="stylesheet" type="text/css" href="http://cd
-                                                  //| n.markets.ft.com/Research/ResourceManager/ndE73rxj7N1HOXjf8lLC-A2/u/c/c/0/v
-                                                  //| TX341L1feEjO1uCAk2bUQ2/
-                                                  //| Output exceeds cutoff limit.
-/*
-<div class="wsodModuleContent"><h1 class="contains">
-<div class="emptyExchangeLogo exchangeLogo"></div>
-<span class="formatIssueName">CNX 100 Index-NSE</span>
-<span class="formatIssueSymbol">NNX:NSI</span></h1>
-<div class="wsodModule contains tearsheetOverviewComponent" data-oda-name="Tearsheet overview">
-<div class="contains wsodModuleContent"><table><tbody><tr><td class="text first"><span>8,734.6</span></td>
-<td><span><div class="wsod-icon wsod-icon-v wsod-icon-quote-positive-vertical pos color  colorArrow"><span class="pos color ">29.60 / 0.34%</span></div></span></td>
-<td>256.79k</td>
-<td class="last">
-<div class="wsod-icon wsod-icon-v wsod-icon-quote-positive-vertical pos color  colorArrow">40.37%</div></td></tr><tr><th class="text first">Latest price in INR</th><th><span class="spacer" />Today's change</th><th>Shares traded</th><th class="last"><span class="spacer" />1 year change</th></tr></tbody></table></div>
-*/
-
-content \\ "table"                                //> res3: scala.xml.NodeSeq = NodeSeq(<table><tbody><tr><td class="text first" 
-                                                  //| rowspan="1" colspan="1"><span>8,794.95</span></td><td rowspan="1" colspan="
-                                                  //| 1"><span/><div class="wsod-icon wsod-icon-v wsod-icon-quote-negative-vertic
-                                                  //| al neg color colorArrow"><span class="neg color">129.35 / 1.45%</span></div
-                                                  //| ></td><td rowspan="1" colspan="1">386.92m</td><td class="last" rowspan="1" 
-                                                  //| colspan="1"><div class="wsod-icon wsod-icon-v wsod-icon-quote-positive-vert
-                                                  //| ical pos color colorArrow">47.99%</div></td></tr><tr><th class="text first"
-                                                  //|  rowspan="1" colspan="1">Latest price in INR</th><th rowspan="1" colspan="1
-                                                  //| "><span class="spacer"/>Today's change</th><th rowspan="1" colspan="1">Shar
-                                                  //| es traded</th><th class="last" rowspan="1" colspan="1"><span class="spacer"
-                                                  //| />1 year change</th></tr></tbody></table>, <table class="horizontalTable co
-                                                  //| l1of3"><tbody><tr class="first"><th rowspan="1" colspan="1">Open</th><td ro
-                                                  //| wspan="1" colspan="1">8
+}                                                 //> (INR/AED,0.0587)
+                                                  //| (INR/AFN,0.9248)
+                                                  //| (INR/ALL,2.0680)
+                                                  //| (INR/AMD,7.5425)
+                                                  //| (INR/ANG,0.0286)
+                                                  //| (INR/AOA,1.7296)
+                                                  //| (INR/ARS,0.1409)
+                                                  //| (INR/AUD,0.0206)
+                                                  //| (INR/AWG,0.0286)
+                                                  //| (INR/AZN,0.0168)
+                                                  //| (INR/BAM,0.0287)
+                                                  //| (INR/BBD,0.0320)
+                                                  //| (INR/BDT,1.2455)
+                                                  //| (INR/BGN FIXING,0.0287)
+                                                  //| (INR/BHD,0.0060)
+                                                  //| (INR/BIF,24.9035)
+                                                  //| (INR/BMD,0.0160)
+                                                  //| (INR/BND,0.0219)
+                                                  //| (INR/BOB,0.1105)
+                                                  //| (INR/BRL,0.0519)
+                                                  //| (INR/BSD,0.0160)
+                                                  //| (INR/BTC,0.0001)
+                                                  //| (INR/BTN,0.9991)
+                                                  //| (INR/BWP,0.1579)
+                                                  //| (INR/BYR,233.4900)
+                                                  //| (INR/BZD,0.0319)
+                                                  //| (INR/CAD,0.0202)
+                                                  //| (INR/CDF,14.7770)
+                                                  //| (INR/CHF,0.0154)
+                                                  //| (INR/CLF,0.0004)
+                                                  //| (INR/CLP,9.9648)
+                                                  //| (INR/CNY,0.0993)
+                                                  //| (INR/COP,40.9167)
+                                                  //| (INR/CRC,8.5146)
+                                                  //| (N/A,N/A)
+                                                  //| (INR/CUP,0.0160)
+                                                  //| (INR/CVE,1.6076)
+                                                  //| (INR/CZK,0.4035)
+                                                  //| (INR/DJF,2.8430)
+                                                  //| (INR/DKK,0.1097)
+                                                  //| (INR/DOP,0.7147)
+                                                  //| (INR/DZD,1.5535)
+                                                  //| (N/A,N/A)
+                                                  //| (INR/EGP,0.1220)
+                                                  //| (INR/ERN,0.2443)
+                                                  //| (INR/ET
                                                   //| Output exceeds cutoff limit.
 
-for {
-	 h <- content \\ "table"
-	if (h \ "@class").text == "horizontalTable col1of3"
-		node <- h \ "tr" \ "th" \ "td"
-	} yield {node.text }                      //> res4: scala.collection.immutable.Seq[String] = List()
 
-println(content)                                  //> <html lang="en"><head><meta content="IE=edge,chrome=1" http-equiv="X-UA-Com
-                                                  //| patible"/><meta charset="UTF-8"/><title>CNX 100 Index-NSE chart, prices and
-                                                  //|  performance - FT.com</title><meta content="CNX 100 Index-NSE index chart, 
-                                                  //| prices and performance, plus recent news and analysis." name="description"/
-                                                  //| ><meta content="CNX 100 Index-NSE index chart, prices and performance, plus
-                                                  //|  recent news and analysis." name="keywords"/><link media="all" href="http:/
-                                                  //| /s1.ft-static.com/m/style/2d49d277/bundles/core.css" rel="stylesheet"/><lin
-                                                  //| k media="all" href="http://navigation.webservices.ft.com/v1/navigation/ft/c
-                                                  //| ss/style.min.css" rel="stylesheet"/><link media="all" href="http://s1.ft-st
-                                                  //| atic.com/m/style/5c37627a/bundles/nonArticle.css" rel="stylesheet"/><link r
-                                                  //| el="stylesheet" type="text/css" href="http://cdn.markets.ft.com/Research/Re
-                                                  //| sourceManager/ndE73rxj7N1HOXjf8lLC-A2/u/c/c/0/vTX341L1feEjO1uCAk2bUQ2/$wrXM
-                                                  //| w9rb3N3et7i5uru8zr7Sx7_
-                                                  //| Output exceeds cutoff limit.
 
 
   

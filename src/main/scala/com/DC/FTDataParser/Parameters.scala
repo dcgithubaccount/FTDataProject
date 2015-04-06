@@ -3,7 +3,8 @@ package com.DC.FTDataParser
 trait Parameters {
 
   val path = "/Volumes/MyData/SharesProject/FTCompanyData/Output/"
-  val FlagPath = "/Volumes/MyData/SharesProject/FTCompanyData/Complete/"
+  val ReportPath = "/Volumes/MyData/SharesProject/FTCompanyData/Reports/"
+  val PBConfFile = "/Volumes/MyData/SharesProject/FTCompanyData/Configuration/PBDivi.csv"  
   
   val file_map = Map(
     "Australia" -> "_ASX100.csv",

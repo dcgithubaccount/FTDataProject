@@ -23,12 +23,15 @@ libraryDependencies += "org.mongodb" %% "casbah" % "2.7.3"
 
 libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.3.6"
 
+libraryDependencies += "net.sf.opencsv" % "opencsv" % "2.3"
+
 libraryDependencies += "com.typesafe.akka" % "akka-camel_2.10" % "2.3.6"
 
 libraryDependencies += "org.apache.camel" % "camel-scala" % "2.14.0"               
 
-libraryDependencies += "org.ccil.cowan.tagsoup" % "tagsoup" % "1.2"                            
+//libraryDependencies += "org.ccil.cowan.tagsoup" % "tagsoup" % "1.2"                            
 
+//libraryDependencies += "net.liftweb" % "lift-json" % "2.0"
 
 mainClass in assembly := Some("com.DC.FTDataParser.MainApp")
                             
