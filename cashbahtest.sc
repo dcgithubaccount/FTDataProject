@@ -7,33 +7,33 @@ object cashbahtest {
   import java.math.BigDecimal
   import scala.util.Try
   val mongoClient = MongoClient("localhost", 27017)
-                                                  //> 11:01:49.192 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Registeri
+                                                  //> 01:06:23.156 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Registeri
                                                   //| ng Scala Conversions.
-                                                  //| 11:01:49.206 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Deseriali
+                                                  //| 01:06:23.160 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Deseriali
                                                   //| zers for Scala Conversions registering
-                                                  //| 11:01:49.207 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Serialize
+                                                  //| 01:06:23.161 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Serialize
                                                   //| rs for Scala Conversions registering
-                                                  //| 11:01:49.207 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 01:06:23.161 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p OptionSerializer
-                                                  //| 11:01:49.208 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 01:06:23.163 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaProductSerializer
-                                                  //| 11:01:49.210 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 01:06:23.165 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaCollectionSerializer
-                                                  //| 11:01:49.211 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 01:06:23.166 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaRegexSerializers
-                                                  //| 11:01:49.211 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Hooking u
+                                                  //| 01:06:23.166 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Hooking u
                                                   //| p scala.util.matching.Regex serializer
-                                                  //| 11:01:49.220 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Reached b
+                                                  //| 01:06:23.167 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Reached b
                                                   //| as
                                                   //| Output exceeds cutoff limit.
 	val db = mongoClient("CompanyDatabase")   //> db  : com.mongodb.casbah.MongoDB = CompanyDatabase
 	val price = db("PriceAndRatio")           //> price  : com.mongodb.casbah.MongoCollection = PriceAndRatio
 	val statement = db("FinancialStatements") //> statement  : com.mongodb.casbah.MongoCollection = FinancialStatements
-	val country = "USA"                       //> country  : String = USA
-	val query = MongoDBObject("RunDate" -> "03-04-2015") ++ ("Country" -> country) //++ ("Ratios.AnnualDivYield" $gte 0.025) ++ ("Ratios.PriceToBook" $lte 2.00)
-                                                  //> query  : com.mongodb.casbah.commons.Imports.DBObject = { "RunDate" : "03-04-
-                                                  //| 2015" , "Country" : "USA"}
-  //val query =  MongoDBObject("Symbol" -> "ADM:NYQ")
+	val country = "India"                     //> country  : String = India
+	val query = MongoDBObject("RunDate" -> "06-04-2015") ++ ("Country" -> country) //++ ("Ratios.AnnualDivYield" $gte 0.025) ++ ("Ratios.PriceToBook" $lte 2.00)
+                                                  //> query  : com.mongodb.casbah.commons.Imports.DBObject = { "RunDate" : "06-04-
+                                                  //| 2015" , "Country" : "India"}
+  //val query =  MongoDBObject("Symbol" -> "RCOM:NSI")
   /*val fields = MongoDBObject("Symbol" -> 1,
   													 "RunDate" -> 2,
   													 "Exchange" -> 3,
@@ -43,7 +43,7 @@ object cashbahtest {
   													 "IssueName" -> 7,
   													 "PricesandVolume" -> 8)*/
   	
-val ct = price.count(query)                       //> ct  : Int = 590
+val ct = price.count(query)                       //> ct  : Int = 99
 val stquery = MongoDBObject("_id" -> "CM:TOR2014")//> stquery  : com.mongodb.casbah.commons.Imports.DBObject = { "_id" : "CM:TOR20
                                                   //| 14"}
 for (s <- statement.find(stquery)) println(s)     //> { "_id" : "CM:TOR2014" , "AnnualReportYear" : "2014" , "AnnualReportCCY" : 
@@ -107,7 +107,7 @@ case class Stocks (val Symbol : String,
                    val YearHighPrice : Double,
                    val YearHighDate : String,
                    val ExchangeCCY : String,
-                   val AverageVolume : Double,
+                   val AverageVolume : String,
                    val SharesOutstanding : String,
                    val FreeFloat : String,
                    val MarketCap : String,
@@ -151,7 +151,7 @@ def objectRead(o: DBObject): Stocks = {
       YearHighPrice = fmt((o.getAs[DBObject]("PricesandVolume").get)("YearHighPrice")).toDouble,
       YearHighDate = ((o.getAs[DBObject]("PricesandVolume").get)("YearLowPrice")).toString,
       ExchangeCCY = ((o.getAs[DBObject]("Currency").get)("ExchangeCCY")).toString,
-      AverageVolume = fmt((o.getAs[DBObject]("PricesandVolume").get)("AverageVolume")).toDouble,
+      AverageVolume = fmt((o.getAs[DBObject]("PricesandVolume").get)("AverageVolume")),
       SharesOutstanding = fmt((o.getAs[DBObject]("PricesandVolume").get)("SharesOutstanding")),
       FreeFloat = fmt((o.getAs[DBObject]("PricesandVolume").get)("FreeFloat")),
       MarketCap = fmt((o.getAs[DBObject]("PricesandVolume").get)("MarketCap")),
@@ -170,49 +170,93 @@ def objectRead(o: DBObject): Stocks = {
   }                                               //> objectRead: (o: com.mongodb.casbah.Imports.DBObject)cashbahtest.Stocks
 
 
-val a = (m map {x => objectRead(x)}).toList.sortBy(_.SharesOutstanding)(Desc)
-                                                  //> a  : List[cashbahtest.Stocks] = List(Stocks(CSX:NYQ,Fri Apr 03 00:00:00 BST
-                                                  //|  2015,USA,NYQ,CSX,CSX Corp,Industrial-Transportation,1.93,USD,11.242,USD,0.
-                                                  //| 64,USD,25-02-2015,13-03-2015,33.32,33.28,33.4,32.94,33.45,27.14,27.14,37.99
-                                                  //| ,27.14,USD,9110000.0,991590000.000,983370000.000,33040000000.000,USD,1.964,
-                                                  //| 0.173,0.285,0.843,0.633,17.29,0.019,2.96,2014,-0.39), Stocks(THC:NYQ,Fri Ap
-                                                  //| r 03 00:00:00 BST 2015,USA,NYQ,THC,Tenet Healthcare Corp,Health-Care-Equipm
-                                                  //| ent-and-Services,0.282,USD,6.643,USD,0.0,NA, , ,49.16,48.91,49.68,48.6,48.7
-                                                  //| 9,37.95,37.95,63.61,37.95,USD,1920000.0,99150000.000,97790000.000,487000000
-                                                  //| 0.000,USD,26.866,0.151,0.054,0.163,0.667,174.2,0.0,7.4,2014,0.753), Stocks(
-                                                  //| UHS:NYQ,Fri Apr 03 00:00:00 BST 2015,USA,NYQ,UHS,Universal Health Services 
-                                                  //| Inc,Health-Care-Equipment-and-Services,5.42,USD,37.737,USD,0.4,USD,26-02-20
-                                                  //| 15,16-03-2015,116.69,112.86,116.96,112.4,112.96,73.06,73.06,121.95,73.06,US
-                                                  //| D,993260.0,98980000.000
+val a = (m map {x => objectRead(x)}).toList.sortBy(_.MarketCap.toDouble)(Desc)
+                                                  //> a  : List[cashbahtest.Stocks] = List(Stocks(LUPIN:NSI,Mon Apr 06 00:00:00 B
+                                                  //| ST 2015,India,NSI,LUPN.NS,Lupin Ltd,Pharmaceuticals-and-Biotechnology,53.53
+                                                  //| ,INR,154.723,INR,0.0,NA,21-07-2014,29-07-2014,2088.25,2039.65,2095.0,2039.0
+                                                  //| ,2037.5,902.6,902.6,2095.0,902.6,INR,1350000.000,449490000.000,236040000.00
+                                                  //| 0,914730000000.000,INR,0.472,0.27,0.248,1.011,0.66,38.06,0.0,13.5,2014,2.43
+                                                  //| ), Stocks(IOC:NSI,Mon Apr 06 00:00:00 BST 2015,India,NSI,IOC.NS,Indian Oil 
+                                                  //| Corpn Ltd,Oil-and-Gas-Producers,21.11,INR,279.708,INR,8.7,INR,14-08-2014,26
+                                                  //| -09-2014,374.0,369.55,375.5,368.55,370.6,258.15,258.15,411.2,258.15,INR,939
+                                                  //| 660.000,2430000000.000,248940000.000,899800000000.000,INR,2.927,0.103,0.033
+                                                  //| ,0.614,0.698,17.55,0.024,1.34,2014,0.909), Stocks(BOSCHLTD:NSI,Mon Apr 06 0
+                                                  //| 0:00:00 BST 2015,India,NSI,BOSH.NS,Bosch Ltd,Automobiles-and-Parts,334.46,I
+                                                  //| NR,2380.871,INR,55.0,INR,12-05-2014,05-07-2014,25343.8,25550.0,25560.0,2517
+                                                  //| 0.0,25570.7,10052.0,100
                                                   //| Output exceeds cutoff limit.
 
-(a map { x => (x.Symbol,x.IssueName,x.RIC,x.PriceToBook,x.Close,x.YearLowPrice,x.YearHighPrice,(((x.Close - x.YearLowPrice)/(x.YearHighPrice - x.YearLowPrice))*100))}).toList.
-sortBy(r => r._8).filter {r => (r._8 >=0 && r._8 < 10)}
+((a map { x => (x.Symbol,x.IssueName,x.RIC,x.PriceToBook,x.Close,x.YearLowPrice,x.YearHighPrice,(((x.Close - x.YearLowPrice)/(x.YearHighPrice - x.YearLowPrice))*100))}).toList.
+sortBy(r => r._8).filter {r => (r._8 >=50 && r._8 < 100)})
                                                   //> res2: List[(String, String, String, Double, Double, Double, Double, Double)
-                                                  //| ] = List((KORS:NYQ,Michael Kors Holdings Ltd,KORS.K,7.16,63.39,63.21,98.96,
-                                                  //| 0.5034965034965028), (MAT:NSQ,Mattel Inc,MAT.O,2.6,22.65,22.32,40.79,1.7866
-                                                  //| 811044937647), (PTGCY:PKC,Portugal Telecom SGPS SA,PTGCY.PK,0.32,0.64,0.531
-                                                  //| ,4.63,2.6591851671139297), (SDRL:NYQ,Seadrill Ltd,SDRL.K,0.49,9.66,8.58,40.
-                                                  //| 44,3.389830508474576), (SNDK:NSQ,SanDisk Corp,SNDK.O,2.14,64.57,63.0,108.77
-                                                  //| ,3.430194450513422), (GRMN:NSQ,Garmin Ltd,GRMN.O,2.62,46.49,45.92,62.05,3.5
-                                                  //| 337879727216395), (HPQ:NYQ,Hewlett-Packard Co,HPQ,2.16,31.4,31.03,41.1,3.67
-                                                  //| 4280039721921), (EMR:NYQ,Emerson Electric Co,EMR,3.83,55.54,54.95,69.94,3.9
-                                                  //| 3595730486989), (EMN:NYQ,Eastman Chemical Co,EMN,2.89,68.07,67.13,90.55,4.0
-                                                  //| 13663535439785), (RNO:NYQ,Rhino Resource Partners LP,RNO,0.21,2.36,1.77,14.
-                                                  //| 65,4.5807453416149055), (JOY:NYQ,Joy Global Inc,JOY,1.35,39.05,37.77,65.36,
-                                                  //| 4.639362087712919), (ST
+                                                  //| ] = List((CANBK:NSI,Canara Bank Ltd,CNBK.NS,0.59,385.05,259.0,498.0,52.7405
+                                                  //| 8577405858), (ICICIBANK:NSI,ICICI Bank Ltd,ICBK.NS,2.42,321.25,240.48,393.4
+                                                  //| ,52.81846717237772), (ZEEL:NSI,Zee Entertainment Enterprises Ltd,ZEE.NS,6.8
+                                                  //| 5,338.2,258.95,402.4,55.24573021958871), (COALINDIA:NSI,Coal India Ltd,COAL
+                                                  //| .NS,5.37,360.75,276.55,423.7,57.22052327556915), (SBIN:NSI,State Bank of In
+                                                  //| dia,SBI.NS,1.47,274.65,189.84,336.0,58.025451559934304), (PFC:NSI,Power Fin
+                                                  //| ance Corporation Ltd,PWFC.NS,1.33,278.1,179.6,344.75,59.64274901604604), (F
+                                                  //| EDERALBNK:NSI,Federal Bank Ltd,FED.NS,1.63,130.2,86.75,154.4,64.22764227642
+                                                  //| 274), (OFSS:NSI,Oracle Financial Services Software Ltd,ORCL.NS,3.09,3229.9,
+                                                  //| 2430.89,3668.27,64.57272624416106), (ULTRACEMCO:NSI,UltraTech Cement Ltd,UL
+                                                  //| TC.NS,4.61,2892.55,1950.5,3398.0,65.08117443868741), (TCS:NSI,Tata Consulta
+                                                  //| ncy Services Ltd,TCS.NS
                                                   //| Output exceeds cutoff limit.
 
-/*m map { x =>
- val Symbol = x("Symbol").toString
- val Close  = fmt((x.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble
- val PreviousClose = fmt((x.getAs[DBObject]("PricesandVolume").get)("PreviousClose")).toDouble
- val DebtToEquity = fmt((x.getAs[DBObject]("Ratios").get)("DebtToEquity")).toDouble
- val DailyChange = fmt(((Close - PreviousClose)/Close)*100).toDouble
- Stocks(Symbol,Close,PreviousClose,DebtToEquity,DailyChange)
- //println(Stocks.Symbol)
- }
-*/
+val stockquery =  MongoDBObject("Symbol" -> "SREN:VTX")
+                                                  //> stockquery  : com.mongodb.casbah.commons.Imports.DBObject = { "Symbol" : "S
+                                                  //| REN:VTX"}
+
+val qq = (for (d <- price.find(stockquery)) yield(
+										  sf.parse(d("RunDate").toString),
+										  fmt((d.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble)).toList.sortBy{x => x._1}
+                                                  //> qq  : List[(java.util.Date, Double)] = List((Thu Aug 28 00:00:00 BST 2014,7
+                                                  //| 4.8), (Tue Sep 02 00:00:00 BST 2014,75.55), (Wed Sep 03 00:00:00 BST 2014,7
+                                                  //| 5.7), (Thu Sep 04 00:00:00 BST 2014,76.25), (Wed Sep 17 00:00:00 BST 2014,7
+                                                  //| 6.0), (Wed Oct 01 00:00:00 BST 2014,76.1), (Thu Oct 02 00:00:00 BST 2014,75
+                                                  //| .0), (Fri Oct 03 00:00:00 BST 2014,75.25), (Mon Oct 06 00:00:00 BST 2014,75
+                                                  //| .0), (Tue Oct 07 00:00:00 BST 2014,74.9), (Wed Oct 08 00:00:00 BST 2014,75.
+                                                  //| 6), (Thu Oct 09 00:00:00 BST 2014,75.1), (Fri Oct 10 00:00:00 BST 2014,73.8
+                                                  //| ), (Mon Oct 13 00:00:00 BST 2014,73.65), (Tue Oct 14 00:00:00 BST 2014,73.0
+                                                  //| 5), (Wed Oct 15 00:00:00 BST 2014,72.05), (Thu Oct 16 00:00:00 BST 2014,71.
+                                                  //| 05), (Fri Oct 17 00:00:00 BST 2014,71.7), (Mon Oct 20 00:00:00 BST 2014,71.
+                                                  //| 55), (Tue Oct 21 00:00:00 BST 2014,72.3), (Wed Oct 22 00:00:00 BST 2014,73.
+                                                  //| 9), (Thu Oct 23 00:00:00 BST 2014,74.9), (Fri Oct 24 00:00:00 BST 2014,74.7
+                                                  //| ), (Tue Oct 28 00:00:00
+                                                  //| Output exceeds cutoff limit.
+//val qq = List(1,2,4,5,7,8,9,22,13,23) map {x => x.toDouble}
+qq.length                                         //> res3: Int = 125
+
+val priceqq = qq map {x => x._2}                  //> priceqq  : List[Double] = List(74.8, 75.55, 75.7, 76.25, 76.0, 76.1, 75.0, 
+                                                  //| 75.25, 75.0, 74.9, 75.6, 75.1, 73.8, 73.65, 73.05, 72.05, 71.05, 71.7, 71.5
+                                                  //| 5, 72.3, 73.9, 74.9, 74.7, 75.65, 77.7, 76.95, 76.75, 78.05, 78.1, 79.65, 8
+                                                  //| 0.55, 80.7, 80.5, 80.6, 80.85, 80.55, 81.0, 82.6, 82.65, 83.3, 83.95, 82.95
+                                                  //| , 83.95, 83.75, 83.4, 82.95, 83.7, 82.2, 80.8, 81.3, 81.3, 83.2, 83.9, 84.5
+                                                  //| 5, 84.9, 84.9, 84.9, 84.9, 84.7, 83.65, 83.65, 82.55, 81.9, 82.2, 84.2, 84.
+                                                  //| 15, 84.6, 86.25, 85.3, 80.5, 77.85, 78.65, 79.15, 78.4, 78.95, 80.4, 81.05,
+                                                  //|  81.95, 82.1, 83.0, 83.1, 82.75, 83.7, 84.05, 83.8, 84.0, 84.25, 84.35, 84.
+                                                  //| 3, 84.55, 84.85, 84.15, 84.8, 85.4, 85.5, 86.1, 86.75, 87.05, 87.45, 87.65,
+                                                  //|  87.85, 87.75, 88.2, 89.0, 89.35, 89.7, 89.55, 90.6, 91.1, 91.55, 92.4, 92.
+                                                  //| 45, 93.0, 93.2, 94.85, 94.65, 95.0, 93.25, 93.1, 94.9, 94.1, 94.5, 94.7, 94
+                                                  //| .7, 94.7)
+
+def movingAverage(values: List[Double], period: Int): List[Double] = {
+   val first = (values take period).sum / period
+   val subtract = values map (_ / period)
+   val add = subtract drop period
+   val addAndSubtract = add zip subtract map Function.tupled(_ - _)
+   val res = (addAndSubtract.foldLeft(first :: List.fill(period - 1)(0.0)) {
+     (acc, add) => (add + acc.head) :: acc
+   }).reverse
+   res
+ }                                                //> movingAverage: (values: List[Double], period: Int)List[Double]
+ 
+ val mva15 = (movingAverage(qq map {x => x._2},15) map {x => fmt(x).toDouble}).reverse.take(1)
+                                                  //> mva15  : List[Double] = List(93.967)
+ val mva50 = (movingAverage(qq map {x => x._2},50) map {x => fmt(x).toDouble}).reverse.take(1)
+                                                  //> mva50  : List[Double] = List(88.224)
+ 
+
                                                    
  
                                                   

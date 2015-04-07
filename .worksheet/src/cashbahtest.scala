@@ -9,10 +9,10 @@ object cashbahtest {;import org.scalaide.worksheet.runtime.library.WorksheetSupp
   val mongoClient = MongoClient("localhost", 27017);System.out.println("""mongoClient  : com.mongodb.casbah.MongoClient = """ + $show(mongoClient ));$skip(41); 
 	val db = mongoClient("CompanyDatabase");System.out.println("""db  : com.mongodb.casbah.MongoDB = """ + $show(db ));$skip(33); 
 	val price = db("PriceAndRatio");System.out.println("""price  : com.mongodb.casbah.MongoCollection = """ + $show(price ));$skip(43); 
-	val statement = db("FinancialStatements");System.out.println("""statement  : com.mongodb.casbah.MongoCollection = """ + $show(statement ));$skip(21); 
-	val country = "USA";System.out.println("""country  : String = """ + $show(country ));$skip(158); 
-	val query = MongoDBObject("RunDate" -> "03-04-2015") ++ ("Country" -> country);System.out.println("""query  : com.mongodb.casbah.commons.Imports.DBObject = """ + $show(query ));$skip(379);  //++ ("Ratios.AnnualDivYield" $gte 0.025) ++ ("Ratios.PriceToBook" $lte 2.00)
-  //val query =  MongoDBObject("Symbol" -> "ADM:NYQ")
+	val statement = db("FinancialStatements");System.out.println("""statement  : com.mongodb.casbah.MongoCollection = """ + $show(statement ));$skip(23); 
+	val country = "India";System.out.println("""country  : String = """ + $show(country ));$skip(158); 
+	val query = MongoDBObject("RunDate" -> "06-04-2015") ++ ("Country" -> country);System.out.println("""query  : com.mongodb.casbah.commons.Imports.DBObject = """ + $show(query ));$skip(380);  //++ ("Ratios.AnnualDivYield" $gte 0.025) ++ ("Ratios.PriceToBook" $lte 2.00)
+  //val query =  MongoDBObject("Symbol" -> "RCOM:NSI")
   /*val fields = MongoDBObject("Symbol" -> 1,
   													 "RunDate" -> 2,
   													 "Exchange" -> 3,
@@ -75,7 +75,7 @@ case class Stocks (val Symbol : String,
                    val YearHighPrice : Double,
                    val YearHighDate : String,
                    val ExchangeCCY : String,
-                   val AverageVolume : Double,
+                   val AverageVolume : String,
                    val SharesOutstanding : String,
                    val FreeFloat : String,
                    val MarketCap : String,
@@ -90,7 +90,7 @@ case class Stocks (val Symbol : String,
                    val PriceToBook : Double,
                    val FinancialStmtYear : String,
                    val DailyChange : Double
-                   );System.out.println("""res1: Comparable[_ >: java.util.Date with String <: Comparable[_ >: java.util.Date with String <: java.io.Serializable] with java.io.Serializable] with java.io.Serializable = """ + $show(res$1));$skip(4954); 
+                   );System.out.println("""res1: Comparable[_ >: java.util.Date with String <: Comparable[_ >: java.util.Date with String <: java.io.Serializable] with java.io.Serializable] with java.io.Serializable = """ + $show(res$1));$skip(4945); 
 
 def objectRead(o: DBObject): Stocks = {
     Stocks(
@@ -119,7 +119,7 @@ def objectRead(o: DBObject): Stocks = {
       YearHighPrice = fmt((o.getAs[DBObject]("PricesandVolume").get)("YearHighPrice")).toDouble,
       YearHighDate = ((o.getAs[DBObject]("PricesandVolume").get)("YearLowPrice")).toString,
       ExchangeCCY = ((o.getAs[DBObject]("Currency").get)("ExchangeCCY")).toString,
-      AverageVolume = fmt((o.getAs[DBObject]("PricesandVolume").get)("AverageVolume")).toDouble,
+      AverageVolume = fmt((o.getAs[DBObject]("PricesandVolume").get)("AverageVolume")),
       SharesOutstanding = fmt((o.getAs[DBObject]("PricesandVolume").get)("SharesOutstanding")),
       FreeFloat = fmt((o.getAs[DBObject]("PricesandVolume").get)("FreeFloat")),
       MarketCap = fmt((o.getAs[DBObject]("PricesandVolume").get)("MarketCap")),
@@ -135,24 +135,39 @@ def objectRead(o: DBObject): Stocks = {
       FinancialStmtYear = o("FinanceStatements").toString.takeRight(4),
       DailyChange = fmt((((fmt((o.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble - fmt((o.getAs[DBObject]("PricesandVolume").get)("PreviousClose")).toDouble)/fmt((o.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble))*100).toDouble
     )
-  };System.out.println("""objectRead: (o: com.mongodb.casbah.Imports.DBObject)cashbahtest.Stocks""");$skip(80); 
+  };System.out.println("""objectRead: (o: com.mongodb.casbah.Imports.DBObject)cashbahtest.Stocks""");$skip(81); 
 
 
-val a = (m map {x => objectRead(x)}).toList.sortBy(_.SharesOutstanding)(Desc);System.out.println("""a  : List[cashbahtest.Stocks] = """ + $show(a ));$skip(233); val res$2 = 
+val a = (m map {x => objectRead(x)}).toList.sortBy(_.MarketCap.toDouble)(Desc);System.out.println("""a  : List[cashbahtest.Stocks] = """ + $show(a ));$skip(237); val res$2 = 
 
-(a map { x => (x.Symbol,x.IssueName,x.RIC,x.PriceToBook,x.Close,x.YearLowPrice,x.YearHighPrice,(((x.Close - x.YearLowPrice)/(x.YearHighPrice - x.YearLowPrice))*100))}).toList.
-sortBy(r => r._8).filter {r => (r._8 >=0 && r._8 < 10)};System.out.println("""res2: List[(String, String, String, Double, Double, Double, Double, Double)] = """ + $show(res$2))}
+((a map { x => (x.Symbol,x.IssueName,x.RIC,x.PriceToBook,x.Close,x.YearLowPrice,x.YearHighPrice,(((x.Close - x.YearLowPrice)/(x.YearHighPrice - x.YearLowPrice))*100))}).toList.
+sortBy(r => r._8).filter {r => (r._8 >=50 && r._8 < 100)});System.out.println("""res2: List[(String, String, String, Double, Double, Double, Double, Double)] = """ + $show(res$2));$skip(57); 
 
-/*m map { x =>
- val Symbol = x("Symbol").toString
- val Close  = fmt((x.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble
- val PreviousClose = fmt((x.getAs[DBObject]("PricesandVolume").get)("PreviousClose")).toDouble
- val DebtToEquity = fmt((x.getAs[DBObject]("Ratios").get)("DebtToEquity")).toDouble
- val DailyChange = fmt(((Close - PreviousClose)/Close)*100).toDouble
- Stocks(Symbol,Close,PreviousClose,DebtToEquity,DailyChange)
- //println(Stocks.Symbol)
- }
-*/
+val stockquery =  MongoDBObject("Symbol" -> "SREN:VTX");System.out.println("""stockquery  : com.mongodb.casbah.commons.Imports.DBObject = """ + $show(stockquery ));$skip(202); 
+
+val qq = (for (d <- price.find(stockquery)) yield(
+										  sf.parse(d("RunDate").toString),
+										  fmt((d.getAs[DBObject]("PricesandVolume").get)("Close")).toDouble)).toList.sortBy{x => x._1};System.out.println("""qq  : List[(java.util.Date, Double)] = """ + $show(qq ));$skip(72); val res$3 = 
+//val qq = List(1,2,4,5,7,8,9,22,13,23) map {x => x.toDouble}
+qq.length;System.out.println("""res3: Int = """ + $show(res$3));$skip(34); 
+
+val priceqq = qq map {x => x._2};System.out.println("""priceqq  : List[Double] = """ + $show(priceqq ));$skip(409); 
+
+def movingAverage(values: List[Double], period: Int): List[Double] = {
+   val first = (values take period).sum / period
+   val subtract = values map (_ / period)
+   val add = subtract drop period
+   val addAndSubtract = add zip subtract map Function.tupled(_ - _)
+   val res = (addAndSubtract.foldLeft(first :: List.fill(period - 1)(0.0)) {
+     (acc, add) => (add + acc.head) :: acc
+   }).reverse
+   res
+ };System.out.println("""movingAverage: (values: List[Double], period: Int)List[Double]""");$skip(97); 
+ 
+ val mva15 = (movingAverage(qq map {x => x._2},15) map {x => fmt(x).toDouble}).reverse.take(1);System.out.println("""mva15  : List[Double] = """ + $show(mva15 ));$skip(95); 
+ val mva50 = (movingAverage(qq map {x => x._2},50) map {x => fmt(x).toDouble}).reverse.take(1);System.out.println("""mva50  : List[Double] = """ + $show(mva50 ))}
+ 
+
                                                    
  
                                                   
