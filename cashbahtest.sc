@@ -13,23 +13,23 @@ object cashbahtest {
   import breeze.linalg._
   
   val mongoClient = MongoClient("localhost", 27017)
-                                                  //> 00:14:16.916 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Registeri
+                                                  //> 00:32:42.336 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Registeri
                                                   //| ng Scala Conversions.
-                                                  //| 00:14:16.919 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Deseriali
+                                                  //| 00:32:42.339 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Deseriali
                                                   //| zers for Scala Conversions registering
-                                                  //| 00:14:16.920 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Serialize
+                                                  //| 00:32:42.340 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Serialize
                                                   //| rs for Scala Conversions registering
-                                                  //| 00:14:16.920 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 00:32:42.340 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p OptionSerializer
-                                                  //| 00:14:16.922 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 00:32:42.342 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaProductSerializer
-                                                  //| 00:14:16.923 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 00:32:42.343 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaCollectionSerializer
-                                                  //| 00:14:16.923 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
+                                                  //| 00:32:42.343 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting u
                                                   //| p ScalaRegexSerializers
-                                                  //| 00:14:16.924 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Hooking u
+                                                  //| 00:32:42.344 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Hooking u
                                                   //| p scala.util.matching.Regex serializer
-                                                  //| 00:14:16.925 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Reached b
+                                                  //| 00:32:42.345 [main] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Reached b
                                                   //| as
                                                   //| Output exceeds cutoff limit.
 	val db = mongoClient("CompanyDatabase")   //> db  : com.mongodb.casbah.MongoDB = CompanyDatabase
@@ -265,8 +265,8 @@ def excessReturn (q :String, n : Int) :List[Double] = {
 
 
 def stDev(v :List[Double]) : Double = {
-		val sd = sqrt(variance(v))
-		sd
+		sqrt(variance(v))
+		
 }                                                 //> stDev: (v: List[Double])Double
 
 logReturn("BLT:LSE",100)                          //> res4: List[Double] = List(-0.004524894598289689, -0.016946848422534654, 0.0
@@ -310,24 +310,21 @@ excessReturn("VOD:LSE",5)                         //> res9: List[Double] = List(
                                                   //| 82775338988735, 0.015166878760727774)
 
 val dm = (DenseMatrix(excessReturn("ULVR:LSE",100),excessReturn("BLT:LSE",100),excessReturn("VOD:LSE",100))) * (DenseMatrix(excessReturn("ULVR:LSE",100),excessReturn("BLT:LSE",100),excessReturn("VOD:LSE",100)).t)
-                                                  //> Aug 10, 2015 12:14:23 AM com.github.fommil.jni.JniLoader liberalLoad
+                                                  //> Aug 10, 2015 12:32:49 AM com.github.fommil.jni.JniLoader liberalLoad
                                                   //| INFO: successfully loaded /var/folders/q1/yjdlc6x94jj914k4_8lvyrwr0000gn/T/
-                                                  //| jniloader8855984035479436966netlib-native_system-osx-x86_64.jnilib
+                                                  //| jniloader2818954532629144104netlib-native_system-osx-x86_64.jnilib
                                                   //| dm  : breeze.linalg.DenseMatrix[Double] = 0.016114976458444882  0.003821964
                                                   //| 207076334  0.011393834334016941  
                                                   //| 0.003821964207076334  0.06709118031756633   0.004265166164031304  
                                                   //| 0.011393834334016941  0.004265166164031304  0.02565575713656118   
 																										
 
-val dm1 = dm :/ 99.0                              //> dm1  : breeze.linalg.DenseMatrix[Double] = 1.6277753998429175E-4  3.8605699
-                                                  //| 06137711E-5   1.1508923569714082E-4  
-                                                  //| 3.860569906137711E-5   6.776886900764276E-4   4.3082486505366705E-5  
-                                                  //| 1.1508923569714082E-4  4.3082486505366705E-5  2.591490619854665E-4   
-
-val dm2 = breeze.numerics.rint(dm1 :* 100000.toDouble) :/ 100000.toDouble
-                                                  //> dm2  : breeze.linalg.DenseMatrix[Double] = 1.6E-4  4.0E-5  1.2E-4  
+val dm1 = breeze.numerics.rint((dm :/ 99.0) :* 100000.0) :/ 100000.0
+                                                  //> dm1  : breeze.linalg.DenseMatrix[Double] = 1.6E-4  4.0E-5  1.2E-4  
                                                   //| 4.0E-5  6.8E-4  4.0E-5  
                                                   //| 1.2E-4  4.0E-5  2.6E-4  
+
+//val dm2 = breeze.numerics.rint(dm1 :* 100000.toDouble) :/ 100000.toDouble
 
 
 
@@ -341,12 +338,9 @@ val sdm1 = breeze.numerics.rint(sdm :* 100000.toDouble) :/ 100000.toDouble
                                                   //| 3.4E-4  6.8E-4  4.2E-4  
                                                   //| 2.1E-4  4.2E-4  2.6E-4  
 //println(dm)
-val cor = dm1 :/ sdm                              //> cor  : breeze.linalg.DenseMatrix[Double] = 0.9898989898989904   0.115061476
-                                                  //| 51021462  0.5546940738074395   
-                                                  //| 0.11506147651021462  0.9898989898989898   0.10176576514110544  
-                                                  //| 0.5546940738074395   0.10176576514110544  0.9898989898989894   
-val cor1 = breeze.numerics.rint((dm2 :/ sdm1) :* 10000.0) :/ 10000.0
-                                                  //> cor1  : breeze.linalg.DenseMatrix[Double] = 1.0     0.1176  0.5714  
+//val cor = dm1 :/ sdm
+val cor = breeze.numerics.rint((dm1 :/ sdm1) :* 10000.0) :/ 10000.0
+                                                  //> cor  : breeze.linalg.DenseMatrix[Double] = 1.0     0.1176  0.5714  
                                                   //| 0.1176  1.0     0.0952  
                                                   //| 0.5714  0.0952  1.0     
 
