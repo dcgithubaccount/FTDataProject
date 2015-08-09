@@ -22,6 +22,20 @@ val a = for (i <- PB; if i.country == country ) yield (i.PB,i.Diviyield)
                                                   //> a  : Iterator[(Double, Double)] = non-empty iterator
 val (pb, diviyield) = a.toList.head               //> pb  : Double = 3.0
                                                   //| diviyield  : Double = 0.015
+val l = List((2015,6,1),(2015,6,8),(2015,7,21))   //> l  : List[(Int, Int, Int)] = List((2015,6,1), (2015,6,8), (2015,7,21))
+
+def ls (xs :List[Any]) :List[Any] = xs match {
+	case xs => xs drop (1)
+}                                                 //> ls: (xs: List[Any])List[Any]
+
+l map { x => List(x._2,x._3)}                     //> res0: List[List[Int]] = List(List(6, 1), List(6, 8), List(7, 21))
+
+val qq = l groupBy {x => x._1} map {case(k,v) => (k,v map {x => List(x._2,x._3)})}
+                                                  //> qq  : scala.collection.immutable.Map[Int,List[List[Int]]] = Map(2015 -> List
+                                                  //| (List(6, 1), List(6, 8), List(7, 21)))
+qq map {case(k,v) => (k,ls(v))}                   //> res1: scala.collection.immutable.Map[Int,List[Any]] = Map(2015 -> List(List(
+                                                  //| 6, 8), List(7, 21)))
+
 /*
 										  sdf.parse(d("RunDate").toString), //2
 										  d("Country"), //3
