@@ -11,33 +11,6 @@ object FileParser extends Parameters {
 val FileParserlogger = LoggerFactory.getLogger(this.getClass)
 FileParserlogger.info("Entering FileParser")  
   
-def stringconvertor(prefix: String) : Any = {
-
-		prefix.takeRight(1) match {
-		case "k" => prefix.reverse.substring(1).reverse.toDouble * 1000
-		case "m" => prefix.reverse.substring(1).reverse.toDouble * 1000000
-		case "n" => prefix.reverse.substring(2).reverse.toDouble * 1000000000
-		case "%" => BigDecimal(prefix.reverse.substring(1).reverse) / 100 
-		case ")" => BigDecimal(prefix.dropRight(1).drop(1)) * -1
-		case "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" => BigDecimal(prefix)
-		case _   => " "
-		}
-
-	}	 
-
-
-def exphandler(i: => Any) = Try(i) match {
-  case Success(v) => v
-  case Failure(_) => " "
-}
-
-
-def fmt(v: Any): String = v match {
-	case d : Double => "%1.2f" format d
-	case i : Int => i.toString
-	case b : BigDecimal => "%.3f" format b
-	case _ => " "
-	}
 
 
 def exchangelookup(s :String): Try[String] = Try (exchange_currency_map(s))
@@ -48,9 +21,11 @@ def getdatafromFT (dir: String, dates: String) : Array[Array[Any]] = {
 	XMLPersisterlogger.info("Fetching Currency Pairs")
 	//val nodes = getXML.right
 	
-	val nodes = getXML(ccyurl,6) match {case Success(nodes) => nodes }
+	val node = getXML(ccyurl,6).toOption
 	
 	
+	val nodes = node match {case Some(nodes) => nodes}    
+	  	
 	XMLPersisterlogger.info("Testing USD GBP Currency Pair {}", getexchange(nodes,"GBP"))
 	XMLPersisterlogger.info("Extracting Currency Complete")
 	

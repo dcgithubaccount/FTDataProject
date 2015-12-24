@@ -16,7 +16,7 @@ object ReportWriter extends DBConnection with Parameters{
   import java.io.BufferedWriter
   
   val ReportWriterLogger = LoggerFactory.getLogger(this.getClass)
-  def Desc[T : Ordering] = implicitly[Ordering[T]].reverse	 
+  
    
   def ValuePricetoBook (country: String, dates: String) = {
     

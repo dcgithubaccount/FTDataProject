@@ -1,0 +1,10 @@
+compile
+run main com.DC.FTDataParser.ActorMain
+run
+compile
+run
+exit
+compile
+run
+run MainApp
+exit

@@ -7,10 +7,16 @@ object test {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; 
   		case _ => fibo_tailrec(n-1, b , a + b )
   	}
   	fibo_tailrec(n,0,1)
-  };System.out.println("""fibo: (n: Int)Int""");$skip(23); val res$0 = 
+  };System.out.println("""fibo: (n: Int)Int""");$skip(22); val res$0 = 
   
   
-  fibo(20000005);System.out.println("""res0: Int = """ + $show(res$0));$skip(195); 
+  fibo(2000005);System.out.println("""res0: Int = """ + $show(res$0));$skip(108); 
+  def mean (xs: Seq[Double]): Option[Double] = {
+  	if (xs.isEmpty) None
+  	else Some(xs.sum/xs.length)
+  };System.out.println("""mean: (xs: Seq[Double])Option[Double]""");$skip(18); val res$1 = 
+  
+  mean(List());System.out.println("""res1: Option[Double] = """ + $show(res$1));$skip(195); 
   
   
   def findFirst[A] (as:Array[A], p:A => Boolean): Int = {
@@ -22,18 +28,18 @@ object test {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; 
   		
   	loop(0)
   
-  };System.out.println("""findFirst: [A](as: Array[A], p: A => Boolean)Int""");$skip(66); val res$1 = 
+  };System.out.println("""findFirst: [A](as: Array[A], p: A => Boolean)Int""");$skip(66); val res$2 = 
 
-findFirst(Array("one","two","three"),(x: String) => x == "five");System.out.println("""res1: Int = """ + $show(res$1));$skip(160); 
+findFirst(Array("one","two","three"),(x: String) => x == "five");System.out.println("""res2: Int = """ + $show(res$2));$skip(160); 
 
 	def isSorted[A] (as: Array[A], p:(A,A) => Boolean): Boolean = {
 		if (as.length == 1) true
 		else if (p(as(0),as(1))) false
 		else (isSorted(as.tail,p))
 	
-	};System.out.println("""isSorted: [A](as: Array[A], p: (A, A) => Boolean)Boolean""");$skip(57); val res$2 = 
+	};System.out.println("""isSorted: [A](as: Array[A], p: (A, A) => Boolean)Boolean""");$skip(57); val res$3 = 
 
-isSorted(Array(1,5,5,4,7,3),(x: Int, y: Int) => x == y);System.out.println("""res2: Boolean = """ + $show(res$2));$skip(73); 
+isSorted(Array(1,5,5,4,7,3),(x: Int, y: Int) => x == y);System.out.println("""res3: Boolean = """ + $show(res$3));$skip(73); 
 
 def curry[A,B,C] (f :(A,B) => C): A => (B => C) = {
 	a => b => f(a,b)
@@ -82,7 +88,7 @@ Index(Symbol,Change,DaysLow,DaysHigh,YearLow,YearHigh,LastTradePriceOnly,DaysRan
 
 for ( i <- index) {
 println(i.Symbol,i.Name, i.StockExchange,i.LastTradePriceOnly,i.Change,i.Volume,i.DaysLow,i.DaysHigh,i.YearLow,i.YearHigh)
-};$skip(820); 
+}
 /*result.foreach {
 n =>
 val Symbol     = 	(n \ "Symbol").text
@@ -102,27 +108,84 @@ println(s"$Symbol",s"$Volume",s"$StockExchange",s"$DaysLow",s"$DaysHigh",s"$Year
 }
 
 */
+
+import org.joda.time.DateTime
+import org.joda.time.format.DateTimeFormat;$skip(906); 
+
+
+//val dt = new DateTime()
+//dt.getMinuteOfHour()
+//dt.plusMinutes(1)
+val fmt = DateTimeFormat.forPattern("yyyy-mm-dd HH:mm:ss:SSS");System.out.println("""fmt  : org.joda.time.format.DateTimeFormatter = """ + $show(fmt ));$skip(25); 
+
+val dt = new DateTime();System.out.println("""dt  : org.joda.time.DateTime = """ + $show(dt ));$skip(287); 
+def getsetTime(date : org.joda.time.DateTime) : org.joda.time.DateTime = {
+	val d1 = date.getMinuteOfHour()
+	
+	d1%5 match {
+	case 0 => date.plusMinutes(5)
+	case 1 => date.plusMinutes(4)
+	case 2 => date.plusMinutes(3)
+	case 3 => date.plusMinutes(2)
+	case 4 => date.plusMinutes(1)
+	}
+
+	
+};System.out.println("""getsetTime: (date: org.joda.time.DateTime)org.joda.time.DateTime""");$skip(107); 
+
+val newDate = fmt.parseDateTime(getsetTime(dt).toString(fmt)).withSecondOfMinute(0).withMillisOfSecond(0);System.out.println("""newDate  : org.joda.time.DateTime = """ + $show(newDate ));$skip(47); val res$4 = 
+newDate.getSecondOfDay() - dt.getSecondOfDay();System.out.println("""res4: Int = """ + $show(res$4));$skip(19); val res$5 = 
+
+dt.getDayOfWeek();System.out.println("""res5: Int = """ + $show(res$5));$skip(19); val res$6 = 
+
+dt.getHourOfDay();System.out.println("""res6: Int = """ + $show(res$6));$skip(21); val res$7 = 
+dt.getMinuteOfHour();System.out.println("""res7: Int = """ + $show(res$7));$skip(124); 
+
+
 val init = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(";System.out.println("""init  : String = """ + $show(init ));$skip(60); 
-val last = ")&env=store://datatables.org/alltableswithkeys";System.out.println("""last  : String = """ + $show(last ));$skip(1199); 
-val ccy = Array("AED",	"AFN",	"ALL",	"AMD",	"ANG",	"AOA",	"ARS",	"AUD",	"AWG",	"AZN",	"BAM",	"BBD",	"BDT",	"BGN",	"BHD",	"BIF",	"BMD",	"BND",	"BOB",	"BRL",	"BSD",	"BTC",	"BTN",	"BWP",	"BYR",	"BZD",	"CAD",	"CDF",	"CHF",	"CLF",	"CLP",	"CNY",	"COP",	"CRC",	"CUC",	"CUP",	"CVE",	"CZK",	"DJF",	"DKK",	"DOP",	"DZD",	"EEK",	"EGP",	"ERN",	"ETB",	"EUR",	"FJD",	"FKP",	"GBP",	"GEL",	"GGP",	"GHS",	"GIP",	"GMD",	"GNF",	"GTQ",	"GYD",	"HKD",	"HNL",	"HRK",	"HTG",	"HUF",	"IDR",	"ILS",	"IMP",	"INR",	"IQD",	"IRR",	"ISK",	"JEP",	"JMD",	"JOD",	"JPY",	"KES",	"KGS",	"KHR",	"KMF",	"KPW",	"KRW",	"KWD",	"KYD",	"KZT",	"LAK",	"LBP",	"LKR",	"LRD",	"LSL",	"LTL",	"LVL",	"LYD",	"MAD",	"MDL",	"MGA",	"MKD",	"MMK",	"MNT",	"MOP",	"MRO",	"MTL",	"MUR",	"MVR",	"MWK",	"MXN",	"MYR",	"MZN",	"NAD",	"NGN",	"NIO",	"NOK",	"NPR",	"NZD",	"OMR",	"PAB",	"PEN",	"PGK",	"PHP",	"PKR",	"PLN",	"PYG",	"QAR",	"RON",	"RSD",	"RUB",	"RWF",	"SAR",	"SBD",	"SCR",	"SDG",	"SEK",	"SGD",	"SHP",	"SLL",	"SOS",	"SRD",	"STD",	"SVC",	"SYP",	"SZL",	"THB",	"TJS",	"TMT",	"TND",	"TOP",	"TRY",	"TTD",	"TWD",	"TZS",	"UAH",	"UGX",	"USD",	"UYU",	"UZS",	"VEF",	"VND",	"VUV",	"WST",	"XAF",	"XAG",	"XAU",	"XCD",	"XDR",	"XOF",	"XPF",	"YER",	"ZAR",	"ZMK",	"ZMW",	"ZWL");System.out.println("""ccy  : Array[String] = """ + $show(ccy ));$skip(17); 
-val base = "INR";System.out.println("""base  : String = """ + $show(base ));$skip(54); 
+val last = ")&env=store://datatables.org/alltableswithkeys";System.out.println("""last  : String = """ + $show(last ));$skip(1404); 
+//val ccy = Array("AED",	"AFN",	"ALL",	"AMD",	"ANG",	"AOA",	"ARS",	"AUD",	"AWG",	"AZN",	"BAM",	"BBD",	"BDT",	"BGN",	"BHD",	"BIF",	"BMD",	"BND",	"BOB",	"BRL",	"BSD",	"BTC",	"BTN",	"BWP",	"BYR",	"BZD",	"CAD",	"CDF",	"CHF",	"CLF",	"CLP",	"CNY",	"COP",	"CRC",	"CUC",	"CUP",	"CVE",	"CZK",	"DJF",	"DKK",	"DOP",	"DZD",	"EEK",	"EGP",	"ERN",	"ETB",	"EUR",	"FJD",	"FKP",	"GBP",	"GEL",	"GGP",	"GHS",	"GIP",	"GMD",	"GNF",	"GTQ",	"GYD",	"HKD",	"HNL",	"HRK",	"HTG",	"HUF",	"IDR",	"ILS",	"IMP",	"INR",	"IQD",	"IRR",	"ISK",	"JEP",	"JMD",	"JOD",	"JPY",	"KES",	"KGS",	"KHR",	"KMF",	"KPW",	"KRW",	"KWD",	"KYD",	"KZT",	"LAK",	"LBP",	"LKR",	"LRD",	"LSL",	"LTL",	"LVL",	"LYD",	"MAD",	"MDL",	"MGA",	"MKD",	"MMK",	"MNT",	"MOP",	"MRO",	"MTL",	"MUR",	"MVR",	"MWK",	"MXN",	"MYR",	"MZN",	"NAD",	"NGN",	"NIO",	"NOK",	"NPR",	"NZD",	"OMR",	"PAB",	"PEN",	"PGK",	"PHP",	"PKR",	"PLN",	"PYG",	"QAR",	"RON",	"RSD",	"RUB",	"RWF",	"SAR",	"SBD",	"SCR",	"SDG",	"SEK",	"SGD",	"SHP",	"SLL",	"SOS",	"SRD",	"STD",	"SVC",	"SYP",	"SZL",	"THB",	"TJS",	"TMT",	"TND",	"TOP",	"TRY",	"TTD",	"TWD",	"TZS",	"UAH",	"UGX",	"USD",	"UYU",	"UZS",	"VEF",	"VND",	"VUV",	"WST",	"XAF",	"XAG",	"XAU",	"XCD",	"XDR",	"XOF",	"XPF",	"YER",	"ZAR",	"ZMK",	"ZMW",	"ZWL")
+val ccy = Array("RUB","MXN","INR","KRW","TRY","GBP","PLN","NZD","COP","AUD","CAD","THB","CLP","USD","EUR","SEK","SGD","NOK","JPY","ZAR","MYR","TWD","CHF","PHP","ILS","IDR","CNY","BRL","PEN","HUF","DKK");System.out.println("""ccy  : Array[String] = """ + $show(ccy ));$skip(17); 
+val base = "USD";System.out.println("""base  : String = """ + $show(base ));$skip(54); 
 
 val ccyarray = ccy map {x => "%22"+base + x + "%22"};System.out.println("""ccyarray  : Array[String] = """ + $show(ccyarray ));$skip(39); 
 val ccystring = ccyarray.mkString(",");System.out.println("""ccystring  : String = """ + $show(ccystring ));$skip(42); 
 
 val finalurlString = init+ccystring+last;System.out.println("""finalurlString  : String = """ + $show(finalurlString ));$skip(80); 
-val xchange =  XML.loadString(Source.fromURL(new URL(finalurlString)).mkString);System.out.println("""xchange  : scala.xml.Elem = """ + $show(xchange ));$skip(1192); 
+val xchange =  XML.loadString(Source.fromURL(new URL(finalurlString)).mkString)
 
 
 //val ccyurl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22,%22USDTRY%22,%22USDCNY%22,%22USDTHB%22,%22USDIDR%22,%22USDILS%22,%22USDRUB%22)&env=store://datatables.org/alltableswithkeys"
 
 //val xchange = XML.loadString(Source.fromURL(new URL("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDAUD%22,%22USDEUR%22,%22USDCAD%22,%22USDDKK%22,%22USDHKD%22,%22USDINR%22,%22USDJPY%22,%22USDKRW%22,%22USDBRL%22,%22USDMXN%22,%22USDCLP%22,%22USDPEN%22,%22USDCOP%22,%22USDNZD%22,%22USDNOK%22,%22USDSGD%22,%22USDSEK%22,%22USDCHF%22,%22USDGBP%22,%22USDUSD%22,%22USDZAR%22,%22USDTRY%22,%22USDCNY%22,%22USDTHB%22,%22USDIDR%22,%22USDILS%22,%22USDRUB%22)&env=store://datatables.org/alltableswithkeys")).mkString)
 
-(xchange \ "results" \ "rate").foreach{
-n =>
-println((n \ "Name").text, (n \ "Rate").text)
-}}
+case class Currency(
+val Name : String,
+val Rate : String,
+val Date : String,
+val Time : String,
+val Bid : String,
+val Ask : String);System.out.println("""xchange  : scala.xml.Elem = """ + $show(xchange ));$skip(1507); 
 
+
+
+val currency1 = (xchange \ "results" \ "rate").map {
+n =>
+val Name = (n \ "Name").text
+val Rate = (n \ "Rate").text
+val Date = (n \ "Date").text
+val Time = (n \ "Time").text
+val Bid  = (n \ "Bid").text
+val Ask  = (n \ "Ask").text
+
+Currency(Name,Rate,Date,Time,Bid,Ask)
+
+};System.out.println("""currency1  : scala.collection.immutable.Seq[test.Currency] = """ + $show(currency1 ));$skip(89); val res$8 = 
+
+currency1 filter {x => x.Name != "N/A"} map {x => println(x.Name,x.Rate,x.Date,x.Time)};System.out.println("""res8: scala.collection.immutable.Seq[Unit] = """ + $show(res$8))}
+
+//import com.DC.FTDataParser._
+//CorrelationMatricCalc.getCorMatrix("USA", "28-08-2015", 100)
 
 
 

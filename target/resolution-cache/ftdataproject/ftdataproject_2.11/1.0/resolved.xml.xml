@@ -4,7 +4,7 @@
 		module="ftdataproject_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150806114637"
+		publication="20150926015002"
 	>
 		<description>
 		FTDataProject
@@ -32,17 +32,17 @@
 		<artifact name="ftdataproject_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.1" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.1" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.2" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.2" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.1.7" conf="test->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-xml_2.11" rev="1.0.2" conf="compile->default(compile)"/>
 		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.7" conf="compile->default(compile)"/>
 		<dependency org="ch.qos.logback" name="logback-core" rev="1.1.2" conf="compile->default(compile)"/>
 		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.mongodb" name="casbah_2.11" rev="2.7.3" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.3.14" conf="compile->default(compile)"/>
 		<dependency org="net.sf.opencsv" name="opencsv" rev="2.3" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-camel_2.10" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-camel_2.11" rev="2.3.14" conf="compile->default(compile)"/>
 		<dependency org="org.apache.camel" name="camel-scala" rev="2.14.0" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze_2.11" rev="0.11.2" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze-natives_2.11" rev="0.11.2" conf="compile->default(compile)"/>

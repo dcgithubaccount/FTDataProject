@@ -17,7 +17,18 @@ object test2 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._;
 val country = "India";System.out.println("""country  : String = """ + $show(country ));$skip(74); 
 
 val a = for (i <- PB; if i.country == country ) yield (i.PB,i.Diviyield);System.out.println("""a  : Iterator[(Double, Double)] = """ + $show(a ));$skip(36); 
-val (pb, diviyield) = a.toList.head;System.out.println("""pb  : Double = """ + $show(pb ));System.out.println("""diviyield  : Double = """ + $show(diviyield ))}
+val (pb, diviyield) = a.toList.head;System.out.println("""pb  : Double = """ + $show(pb ));System.out.println("""diviyield  : Double = """ + $show(diviyield ));$skip(48); 
+val l = List((2015,6,1),(2015,6,8),(2015,7,21));System.out.println("""l  : List[(Int, Int, Int)] = """ + $show(l ));$skip(74); 
+
+def ls (xs :List[Any]) :List[Any] = xs match {
+	case xs => xs drop (1)
+};System.out.println("""ls: (xs: List[Any])List[Any]""");$skip(31); val res$0 = 
+
+l map { x => List(x._2,x._3)};System.out.println("""res0: List[List[Int]] = """ + $show(res$0));$skip(84); 
+
+val qq = l groupBy {x => x._1} map {case(k,v) => (k,v map {x => List(x._2,x._3)})};System.out.println("""qq  : scala.collection.immutable.Map[Int,List[List[Int]]] = """ + $show(qq ));$skip(32); val res$1 = 
+qq map {case(k,v) => (k,ls(v))};System.out.println("""res1: scala.collection.immutable.Map[Int,List[Any]] = """ + $show(res$1))}
+
 /*
 										  sdf.parse(d("RunDate").toString), //2
 										  d("Country"), //3

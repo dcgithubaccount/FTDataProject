@@ -251,3 +251,82 @@ clean
 eclipse
 console
 exit
+compile
+run
+compile
+run
+compile
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+compile
+run
+compile
+run
+exit
+run
+exit
+run
+exit
+run
+exit
+eclipse
+exit
+assembly
+exit
+asembly
+assembly
+exit
+assembly
+exit
+compile
+run
+run-main "com.DC.FTDataParser.Main"
+run-main com.DC.FTDataParser.Main
+run
+exit
+run
+run-main com.DC.FTDataParser.Main
+run-main com.DC.FTDataParser.MainApp "NewZealand" "20151210"
+exit
+run
+exit
+run-main com.DC.FTDataParser.Main
+exit
+run-main com.DC.FTDataParser.Main
+compile
+run-main com.DC.FTDataParser.Main
+assembly
+exit 
+assembly
+exit
+assembly
+exit
+eclipse
+exit
+assembly
+exit
+eclipse
+exit
+compile
+run
+eclipse
+exut
+exit
+eclipse
+exit
+compile
+run
+exit
+run
+exit
+eclipse
+exit
+run
+exit
+run

@@ -10,7 +10,7 @@ object test {
   }                                               //> fibo: (n: Int)Int
   
   
-  fibo(20000005)                                  //> res0: Int = -94541383
+  fibo(2000005)                                   //> res0: Int = 761581241
   def mean (xs: Seq[Double]): Option[Double] = {
   	if (xs.isEmpty) None
   	else Some(xs.sum/xs.length)
@@ -56,14 +56,14 @@ import scala.xml._
 import java.net._
 import scala.io.Source
 val temp = XML.loadString(Source.fromURL(new URL("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quote%20where%20symbol%20in%20(%22%5EFTSE%22,%22%5EGDAXI%22,%22%5EFCHI%22,%22FTSEMIB.MI%22,%22%5EAEX%22,%22OMXC20.CO%22,%22%5EOMX%22,%22%5EOSEAX%22,%22%5ESSMI%22,%22%5EBFX%22)&diagnostics=true&env=store://datatables.org/alltableswithkeys")).mkString)
-                                                  //> temp  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-08-0
-                                                  //| 4T20:40:48Z" yahoo:count="10" xmlns:yahoo="http://www.yahooapis.com/v1/base
+                                                  //> temp  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-12-1
+                                                  //| 6T22:04:43Z" yahoo:count="10" xmlns:yahoo="http://www.yahooapis.com/v1/base
                                                   //| .rng"><diagnostics><url execution-time="2" execution-stop-time="2" executio
                                                   //| n-start-time="0">http://www.datatables.org/yahoo/finance/quote/yahoo.financ
                                                   //| e.quote.xml</url><publiclyCallable>true</publiclyCallable><cache type="MEMC
-                                                  //| ACHED" method="GET" execution-time="0" execution-stop-time="6" execution-st
-                                                  //| art-time="6">5d1e1de680846a307c9874dc3d6878dc</cache><url execution-time="2
-                                                  //| 3" execution-stop-time="30" execution-start-time="7">http://download.financ
+                                                  //| ACHED" method="GET" execution-time="1" execution-stop-time="6" execution-st
+                                                  //| art-time="5">5d1e1de680846a307c9874dc3d6878dc</cache><url execution-time="2
+                                                  //| 1" execution-stop-time="27" execution-start-time="6">http://download.financ
                                                   //| e.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g
                                                   //| 6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t
                                                   //| 1t7t8vv1v7ww1w4xy&amp;s=%5EFTSE,%5EGDAXI,%5EFCHI,FTSEMIB.MI,%5EAEX,OMXC20.C
@@ -71,18 +71,18 @@ val temp = XML.loadString(Source.fromURL(new URL("https://query.yahooapis.com/v1
                                                   //| finance.yahoo.com/d/quo
                                                   //| Output exceeds cutoff limit.
 val result = temp \ "results" \ "quote"           //> result  : scala.xml.NodeSeq = NodeSeq(<quote symbol="^FTSE" xmlns:yahoo="ht
-                                                  //| tp://www.yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>-2.05</Cha
-                                                  //| nge><DaysLow>6644.65</DaysLow><DaysHigh>6715.51</DaysHigh><YearLow>6072.68<
-                                                  //| /YearLow><YearHigh>7122.74</YearHigh><MarketCapitalization/><LastTradePrice
-                                                  //| Only>6686.57</LastTradePriceOnly><DaysRange>6644.65 - 6715.51</DaysRange><N
-                                                  //| ame>FTSE 100</Name><Symbol>^FTSE</Symbol><Volume>0</Volume><StockExchange>F
-                                                  //| SI</StockExchange></quote>, <quote symbol="^GDAXI" xmlns:yahoo="http://www.
-                                                  //| yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>+12.35</Change><Day
-                                                  //| sLow>11386.01</DaysLow><DaysHigh>11476.90</DaysHigh><YearLow>8354.97</YearL
-                                                  //| ow><YearHigh>12390.75</YearHigh><MarketCapitalization/><LastTradePriceOnly>
-                                                  //| 11456.07</LastTradePriceOnly><DaysRange>11386.01 - 11476.90</DaysRange><Nam
-                                                  //| e>DAX</Name><Symbol>^GDAXI</Symbol><Volume>0</Volume><StockExchange>GER</St
-                                                  //| ockExchange></quote>, <
+                                                  //| tp://www.yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>+43.40</Ch
+                                                  //| ange><DaysLow>6016.25</DaysLow><DaysHigh>6089.31</DaysHigh><YearLow>5768.22
+                                                  //| </YearLow><YearHigh>7122.74</YearHigh><MarketCapitalization/><LastTradePric
+                                                  //| eOnly>6061.19</LastTradePriceOnly><DaysRange>6016.25 - 6089.31</DaysRange><
+                                                  //| Name>FTSE 100</Name><Symbol>^FTSE</Symbol><Volume>0</Volume><StockExchange>
+                                                  //| FSI</StockExchange></quote>, <quote symbol="^GDAXI" xmlns:yahoo="http://www
+                                                  //| .yahooapis.com/v1/base.rng"><AverageDailyVolume/><Change>+18.88</Change><Da
+                                                  //| ysLow>10423.78</DaysLow><DaysHigh>10572.55</DaysHigh><YearLow>9219.05</Year
+                                                  //| Low><YearHigh>12390.75</YearHigh><MarketCapitalization/><LastTradePriceOnly
+                                                  //| >10469.26</LastTradePriceOnly><DaysRange>10423.78 - 10572.55</DaysRange><Na
+                                                  //| me>DAX</Name><Symbol>^GDAXI</Symbol><Volume>0</Volume><StockExchange>GER</S
+                                                  //| tockExchange></quote>, 
                                                   //| Output exceeds cutoff limit.
 
 case class Index(val Symbol : String,
@@ -111,39 +111,39 @@ val Name       =  (n \ "Name").text
 val Volume     =  (n \ "Volume").text
 val StockExchange = (n \ "StockExchange").text
 Index(Symbol,Change,DaysLow,DaysHigh,YearLow,YearHigh,LastTradePriceOnly,DaysRange,Name,Volume ,StockExchange)
-}                                                 //> index  : scala.collection.immutable.Seq[test.Index] = List(Index(^FTSE,-2.0
-                                                  //| 5,6644.65,6715.51,6072.68,7122.74,6686.57,6644.65 - 6715.51,FTSE 100,0,FSI)
-                                                  //| , Index(^GDAXI,+12.35,11386.01,11476.90,8354.97,12390.75,11456.07,11386.01 
-                                                  //| - 11476.90,DAX,0,GER), Index(^FCHI,-8.38,5075.88,5114.63,3789.11,5283.71,51
-                                                  //| 12.14,5075.88 - 5114.63,CAC 40,0,PAR), Index(FTSEMIB.MI,-241.13,23341.76,23
-                                                  //| 657.52,17555.77,24157.39,23473.25,23341.76 - 23657.52,FTSE MIB,0,MIL), Inde
-                                                  //| x(^AEX,-0.41,497.11,500.83,366.84,510.55,500.02,497.11 - 500.83,AEX,7263,AM
-                                                  //| S), Index(OMXC20.CO,+3.68,976.97,985.98,673.84,1003.35,979.05,976.97 - 985.
-                                                  //| 98,** SEE<^OMXC20>,0,CPH), Index(^OMX,-6.404785,1606.535400,1616.897583,124
-                                                  //| 6.562866,1720.020142,1611.879272,1606.535400 - 1616.897583,OMXS30,0,STO), I
-                                                  //| ndex(^OSEAX,-0.85,679.07,683.45,571.50,717.78,681.97,679.07 - 683.45,OSLO E
-                                                  //| XCH ALL SHARE,0,OSL), Index(^SSMI,+11.23,9435.27,9496.20,7852.83,9525.79,94
-                                                  //| 80.20,9435.27 - 9496.20
+}                                                 //> index  : scala.collection.immutable.Seq[test.Index] = List(Index(^FTSE,+43.
+                                                  //| 40,6016.25,6089.31,5768.22,7122.74,6061.19,6016.25 - 6089.31,FTSE 100,0,FSI
+                                                  //| ), Index(^GDAXI,+18.88,10423.78,10572.55,9219.05,12390.75,10469.26,10423.78
+                                                  //|  - 10572.55,DAX,0,GER), Index(^FCHI,+10.27,4593.92,4664.20,3926.34,5283.71,
+                                                  //| 4624.67,4593.92 - 4664.20,CAC 40,0,PAR), Index(FTSEMIB.MI,-62.45,21095.44,2
+                                                  //| 1373.88,17729.07,24157.39,21210.23,21095.44 - 21373.88,FTSE MIB,0,MIL), Ind
+                                                  //| ex(^AEX,+6.87,431.15,441.60,389.31,510.55,440.50,431.15 - 441.60,AEX,0,AMS)
+                                                  //| , Index(OMXC20.CO,+3.68,976.97,985.98,673.84,1003.35,979.05,976.97 - 985.98
+                                                  //| ,** SEE<^OMXC20>,0,CPH), Index(^OMX,+1.547852,1418.871338,1439.501099,1369.
+                                                  //| 290161,1720.020142,1428.022217,1418.871338 - 1439.501099,OMXS30,0,STO), Ind
+                                                  //| ex(^OSEAX,+2.73,635.32,644.65,571.50,717.78,643.54,635.32 - 644.65,OSLO EXC
+                                                  //| H ALL SHARE,0,OSL), Index(^SSMI,+22.52,8565.67,8657.66,7852.83,9537.90,8604
+                                                  //| .08,8565.67 - 8657.66,S
                                                   //| Output exceeds cutoff limit.
 
 //index.tail.tail.tail.head.Symbol
 
 for ( i <- index) {
 println(i.Symbol,i.Name, i.StockExchange,i.LastTradePriceOnly,i.Change,i.Volume,i.DaysLow,i.DaysHigh,i.YearLow,i.YearHigh)
-                                                  //> (^FTSE,FTSE 100,FSI,6686.57,-2.05,0,6644.65,6715.51,6072.68,7122.74)
-                                                  //| (^GDAXI,DAX,GER,11456.07,+12.35,0,11386.01,11476.90,8354.97,12390.75)
-                                                  //| (^FCHI,CAC 40,PAR,5112.14,-8.38,0,5075.88,5114.63,3789.11,5283.71)
-                                                  //| (FTSEMIB.MI,FTSE MIB,MIL,23473.25,-241.13,0,23341.76,23657.52,17555.77,2415
-                                                  //| 7.39)
-                                                  //| (^AEX,AEX,AMS,500.02,-0.41,7263,497.11,500.83,366.84,510.55)
+                                                  //> (^FTSE,FTSE 100,FSI,6061.19,+43.40,0,6016.25,6089.31,5768.22,7122.74)
+                                                  //| (^GDAXI,DAX,GER,10469.26,+18.88,0,10423.78,10572.55,9219.05,12390.75)
+                                                  //| (^FCHI,CAC 40,PAR,4624.67,+10.27,0,4593.92,4664.20,3926.34,5283.71)
+                                                  //| (FTSEMIB.MI,FTSE MIB,MIL,21210.23,-62.45,0,21095.44,21373.88,17729.07,24157
+                                                  //| .39)
+                                                  //| (^AEX,AEX,AMS,440.50,+6.87,0,431.15,441.60,389.31,510.55)
                                                   //| (OMXC20.CO,** SEE<^OMXC20>,CPH,979.05,+3.68,0,976.97,985.98,673.84,1003.35)
                                                   //| 
-                                                  //| (^OMX,OMXS30,STO,1611.879272,-6.404785,0,1606.535400,1616.897583,1246.56286
-                                                  //| 6,1720.020142)
-                                                  //| (^OSEAX,OSLO EXCH ALL SHARE,OSL,681.97,-0.85,0,679.07,683.45,571.50,717.78)
+                                                  //| (^OMX,OMXS30,STO,1428.022217,+1.547852,0,1418.871338,1439.501099,1369.29016
+                                                  //| 1,1720.020142)
+                                                  //| (^OSEAX,OSLO EXCH ALL SHARE,OSL,643.54,+2.73,0,635.32,644.65,571.50,717.78)
                                                   //| 
-                                                  //| (^SSMI,SMI,VTX,9480.20,+11.23,0,9435.27,9496.20,7852.83,9525.79)
-                                                  //| (^BFX,EURONEXT BEL-20,BRU,3800.00,+94.00,3,3771.00,3805.50,2809.31,3910.33)
+                                                  //| (^SSMI,SMI,VTX,8604.08,+22.52,0,8565.67,8657.66,7852.83,9537.90)
+                                                  //| (^BFX,EURONEXT BEL-20,BRU,3578.00,-10.00,0,3595.00,3629.00,3130.25,3910.33)
                                                   //| 
 }
 /*result.foreach {
@@ -165,84 +165,92 @@ println(s"$Symbol",s"$Volume",s"$StockExchange",s"$DaysLow",s"$DaysHigh",s"$Year
 }
 
 */
+
+import org.joda.time.DateTime
+import org.joda.time.format.DateTimeFormat
+
+
+//val dt = new DateTime()
+//dt.getMinuteOfHour()
+//dt.plusMinutes(1)
+val fmt = DateTimeFormat.forPattern("yyyy-mm-dd HH:mm:ss:SSS")
+                                                  //> fmt  : org.joda.time.format.DateTimeFormatter = org.joda.time.format.DateTi
+                                                  //| meFormatter@50a638b5
+
+val dt = new DateTime()                           //> dt  : org.joda.time.DateTime = 2015-12-16T22:04:43.440Z
+def getsetTime(date : org.joda.time.DateTime) : org.joda.time.DateTime = {
+	val d1 = date.getMinuteOfHour()
+	
+	d1%5 match {
+	case 0 => date.plusMinutes(5)
+	case 1 => date.plusMinutes(4)
+	case 2 => date.plusMinutes(3)
+	case 3 => date.plusMinutes(2)
+	case 4 => date.plusMinutes(1)
+	}
+
+	
+}                                                 //> getsetTime: (date: org.joda.time.DateTime)org.joda.time.DateTime
+
+val newDate = fmt.parseDateTime(getsetTime(dt).toString(fmt)).withSecondOfMinute(0).withMillisOfSecond(0)
+                                                  //> newDate  : org.joda.time.DateTime = 2015-01-16T22:05:00.000Z
+newDate.getSecondOfDay() - dt.getSecondOfDay()    //> res4: Int = 17
+
+dt.getDayOfWeek()                                 //> res5: Int = 3
+
+dt.getHourOfDay()                                 //> res6: Int = 22
+dt.getMinuteOfHour()                              //> res7: Int = 4
+
+
 val init = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20("
                                                   //> init  : String = http://query.yahooapis.com/v1/public/yql?q=select%20*%20fr
                                                   //| om%20yahoo.finance.xchange%20where%20pair%20in%20(
 val last = ")&env=store://datatables.org/alltableswithkeys"
                                                   //> last  : String = )&env=store://datatables.org/alltableswithkeys
-val ccy = Array("AED",	"AFN",	"ALL",	"AMD",	"ANG",	"AOA",	"ARS",	"AUD",	"AWG",	"AZN",	"BAM",	"BBD",	"BDT",	"BGN",	"BHD",	"BIF",	"BMD",	"BND",	"BOB",	"BRL",	"BSD",	"BTC",	"BTN",	"BWP",	"BYR",	"BZD",	"CAD",	"CDF",	"CHF",	"CLF",	"CLP",	"CNY",	"COP",	"CRC",	"CUC",	"CUP",	"CVE",	"CZK",	"DJF",	"DKK",	"DOP",	"DZD",	"EEK",	"EGP",	"ERN",	"ETB",	"EUR",	"FJD",	"FKP",	"GBP",	"GEL",	"GGP",	"GHS",	"GIP",	"GMD",	"GNF",	"GTQ",	"GYD",	"HKD",	"HNL",	"HRK",	"HTG",	"HUF",	"IDR",	"ILS",	"IMP",	"INR",	"IQD",	"IRR",	"ISK",	"JEP",	"JMD",	"JOD",	"JPY",	"KES",	"KGS",	"KHR",	"KMF",	"KPW",	"KRW",	"KWD",	"KYD",	"KZT",	"LAK",	"LBP",	"LKR",	"LRD",	"LSL",	"LTL",	"LVL",	"LYD",	"MAD",	"MDL",	"MGA",	"MKD",	"MMK",	"MNT",	"MOP",	"MRO",	"MTL",	"MUR",	"MVR",	"MWK",	"MXN",	"MYR",	"MZN",	"NAD",	"NGN",	"NIO",	"NOK",	"NPR",	"NZD",	"OMR",	"PAB",	"PEN",	"PGK",	"PHP",	"PKR",	"PLN",	"PYG",	"QAR",	"RON",	"RSD",	"RUB",	"RWF",	"SAR",	"SBD",	"SCR",	"SDG",	"SEK",	"SGD",	"SHP",	"SLL",	"SOS",	"SRD",	"STD",	"SVC",	"SYP",	"SZL",	"THB",	"TJS",	"TMT",	"TND",	"TOP",	"TRY",	"TTD",	"TWD",	"TZS",	"UAH",	"UGX",	"USD",	"UYU",	"UZS",	"VEF",	"VND",	"VUV",	"WST",	"XAF",	"XAG",	"XAU",	"XCD",	"XDR",	"XOF",	"XPF",	"YER",	"ZAR",	"ZMK",	"ZMW",	"ZWL")
-                                                  //> ccy  : Array[String] = Array(AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, A
-                                                  //| ZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BRL, BSD, BTC, BTN, BWP, B
-                                                  //| YR, BZD, CAD, CDF, CHF, CLF, CLP, CNY, COP, CRC, CUC, CUP, CVE, CZK, DJF, D
-                                                  //| KK, DOP, DZD, EEK, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GGP, GHS, GIP, G
-                                                  //| MD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, IMP, INR, IQD, IRR, I
-                                                  //| SK, JEP, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, L
-                                                  //| BP, LKR, LRD, LSL, LTL, LVL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRO, M
-                                                  //| TL, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, P
-                                                  //| EN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, S
-                                                  //| EK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, T
-                                                  //| RY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VEF, VND, VUV, WST, XAF, XAG, X
-                                                  //| AU, XCD, XDR, XOF, XPF, YER, ZAR, ZMK, ZMW, ZWL)
-val base = "INR"                                  //> base  : String = INR
+//val ccy = Array("AED",	"AFN",	"ALL",	"AMD",	"ANG",	"AOA",	"ARS",	"AUD",	"AWG",	"AZN",	"BAM",	"BBD",	"BDT",	"BGN",	"BHD",	"BIF",	"BMD",	"BND",	"BOB",	"BRL",	"BSD",	"BTC",	"BTN",	"BWP",	"BYR",	"BZD",	"CAD",	"CDF",	"CHF",	"CLF",	"CLP",	"CNY",	"COP",	"CRC",	"CUC",	"CUP",	"CVE",	"CZK",	"DJF",	"DKK",	"DOP",	"DZD",	"EEK",	"EGP",	"ERN",	"ETB",	"EUR",	"FJD",	"FKP",	"GBP",	"GEL",	"GGP",	"GHS",	"GIP",	"GMD",	"GNF",	"GTQ",	"GYD",	"HKD",	"HNL",	"HRK",	"HTG",	"HUF",	"IDR",	"ILS",	"IMP",	"INR",	"IQD",	"IRR",	"ISK",	"JEP",	"JMD",	"JOD",	"JPY",	"KES",	"KGS",	"KHR",	"KMF",	"KPW",	"KRW",	"KWD",	"KYD",	"KZT",	"LAK",	"LBP",	"LKR",	"LRD",	"LSL",	"LTL",	"LVL",	"LYD",	"MAD",	"MDL",	"MGA",	"MKD",	"MMK",	"MNT",	"MOP",	"MRO",	"MTL",	"MUR",	"MVR",	"MWK",	"MXN",	"MYR",	"MZN",	"NAD",	"NGN",	"NIO",	"NOK",	"NPR",	"NZD",	"OMR",	"PAB",	"PEN",	"PGK",	"PHP",	"PKR",	"PLN",	"PYG",	"QAR",	"RON",	"RSD",	"RUB",	"RWF",	"SAR",	"SBD",	"SCR",	"SDG",	"SEK",	"SGD",	"SHP",	"SLL",	"SOS",	"SRD",	"STD",	"SVC",	"SYP",	"SZL",	"THB",	"TJS",	"TMT",	"TND",	"TOP",	"TRY",	"TTD",	"TWD",	"TZS",	"UAH",	"UGX",	"USD",	"UYU",	"UZS",	"VEF",	"VND",	"VUV",	"WST",	"XAF",	"XAG",	"XAU",	"XCD",	"XDR",	"XOF",	"XPF",	"YER",	"ZAR",	"ZMK",	"ZMW",	"ZWL")
+val ccy = Array("RUB","MXN","INR","KRW","TRY","GBP","PLN","NZD","COP","AUD","CAD","THB","CLP","USD","EUR","SEK","SGD","NOK","JPY","ZAR","MYR","TWD","CHF","PHP","ILS","IDR","CNY","BRL","PEN","HUF","DKK")
+                                                  //> ccy  : Array[String] = Array(RUB, MXN, INR, KRW, TRY, GBP, PLN, NZD, COP, A
+                                                  //| UD, CAD, THB, CLP, USD, EUR, SEK, SGD, NOK, JPY, ZAR, MYR, TWD, CHF, PHP, I
+                                                  //| LS, IDR, CNY, BRL, PEN, HUF, DKK)
+val base = "USD"                                  //> base  : String = USD
 
 val ccyarray = ccy map {x => "%22"+base + x + "%22"}
-                                                  //> ccyarray  : Array[String] = Array(%22INRAED%22, %22INRAFN%22, %22INRALL%22,
-                                                  //|  %22INRAMD%22, %22INRANG%22, %22INRAOA%22, %22INRARS%22, %22INRAUD%22, %22I
-                                                  //| NRAWG%22, %22INRAZN%22, %22INRBAM%22, %22INRBBD%22, %22INRBDT%22, %22INRBGN
-                                                  //| %22, %22INRBHD%22, %22INRBIF%22, %22INRBMD%22, %22INRBND%22, %22INRBOB%22, 
-                                                  //| %22INRBRL%22, %22INRBSD%22, %22INRBTC%22, %22INRBTN%22, %22INRBWP%22, %22IN
-                                                  //| RBYR%22, %22INRBZD%22, %22INRCAD%22, %22INRCDF%22, %22INRCHF%22, %22INRCLF%
-                                                  //| 22, %22INRCLP%22, %22INRCNY%22, %22INRCOP%22, %22INRCRC%22, %22INRCUC%22, %
-                                                  //| 22INRCUP%22, %22INRCVE%22, %22INRCZK%22, %22INRDJF%22, %22INRDKK%22, %22INR
-                                                  //| DOP%22, %22INRDZD%22, %22INREEK%22, %22INREGP%22, %22INRERN%22, %22INRETB%2
-                                                  //| 2, %22INREUR%22, %22INRFJD%22, %22INRFKP%22, %22INRGBP%22, %22INRGEL%22, %2
-                                                  //| 2INRGGP%22, %22INRGHS%22, %22INRGIP%22, %22INRGMD%22, %22INRGNF%22, %22INRG
-                                                  //| TQ%22, %22INRGYD%22, %22INRHKD%22, %22INRHNL%22, %22INRHRK%22, %22INRHTG%22
-                                                  //| , %22INRHUF%22, %22INRI
-                                                  //| Output exceeds cutoff limit.
-val ccystring = ccyarray.mkString(",")            //> ccystring  : String = %22INRAED%22,%22INRAFN%22,%22INRALL%22,%22INRAMD%22,%
-                                                  //| 22INRANG%22,%22INRAOA%22,%22INRARS%22,%22INRAUD%22,%22INRAWG%22,%22INRAZN%2
-                                                  //| 2,%22INRBAM%22,%22INRBBD%22,%22INRBDT%22,%22INRBGN%22,%22INRBHD%22,%22INRBI
-                                                  //| F%22,%22INRBMD%22,%22INRBND%22,%22INRBOB%22,%22INRBRL%22,%22INRBSD%22,%22IN
-                                                  //| RBTC%22,%22INRBTN%22,%22INRBWP%22,%22INRBYR%22,%22INRBZD%22,%22INRCAD%22,%2
-                                                  //| 2INRCDF%22,%22INRCHF%22,%22INRCLF%22,%22INRCLP%22,%22INRCNY%22,%22INRCOP%22
-                                                  //| ,%22INRCRC%22,%22INRCUC%22,%22INRCUP%22,%22INRCVE%22,%22INRCZK%22,%22INRDJF
-                                                  //| %22,%22INRDKK%22,%22INRDOP%22,%22INRDZD%22,%22INREEK%22,%22INREGP%22,%22INR
-                                                  //| ERN%22,%22INRETB%22,%22INREUR%22,%22INRFJD%22,%22INRFKP%22,%22INRGBP%22,%22
-                                                  //| INRGEL%22,%22INRGGP%22,%22INRGHS%22,%22INRGIP%22,%22INRGMD%22,%22INRGNF%22,
-                                                  //| %22INRGTQ%22,%22INRGYD%22,%22INRHKD%22,%22INRHNL%22,%22INRHRK%22,%22INRHTG%
-                                                  //| 22,%22INRHUF%22,%22INRIDR%22,%22INRILS%22,%22INRIMP%22,%22INRINR%22,%22INRI
-                                                  //| QD%22,%22INRIRR%22,%22I
-                                                  //| Output exceeds cutoff limit.
+                                                  //> ccyarray  : Array[String] = Array(%22USDRUB%22, %22USDMXN%22, %22USDINR%22,
+                                                  //|  %22USDKRW%22, %22USDTRY%22, %22USDGBP%22, %22USDPLN%22, %22USDNZD%22, %22U
+                                                  //| SDCOP%22, %22USDAUD%22, %22USDCAD%22, %22USDTHB%22, %22USDCLP%22, %22USDUSD
+                                                  //| %22, %22USDEUR%22, %22USDSEK%22, %22USDSGD%22, %22USDNOK%22, %22USDJPY%22, 
+                                                  //| %22USDZAR%22, %22USDMYR%22, %22USDTWD%22, %22USDCHF%22, %22USDPHP%22, %22US
+                                                  //| DILS%22, %22USDIDR%22, %22USDCNY%22, %22USDBRL%22, %22USDPEN%22, %22USDHUF%
+                                                  //| 22, %22USDDKK%22)
+val ccystring = ccyarray.mkString(",")            //> ccystring  : String = %22USDRUB%22,%22USDMXN%22,%22USDINR%22,%22USDKRW%22,%
+                                                  //| 22USDTRY%22,%22USDGBP%22,%22USDPLN%22,%22USDNZD%22,%22USDCOP%22,%22USDAUD%2
+                                                  //| 2,%22USDCAD%22,%22USDTHB%22,%22USDCLP%22,%22USDUSD%22,%22USDEUR%22,%22USDSE
+                                                  //| K%22,%22USDSGD%22,%22USDNOK%22,%22USDJPY%22,%22USDZAR%22,%22USDMYR%22,%22US
+                                                  //| DTWD%22,%22USDCHF%22,%22USDPHP%22,%22USDILS%22,%22USDIDR%22,%22USDCNY%22,%2
+                                                  //| 2USDBRL%22,%22USDPEN%22,%22USDHUF%22,%22USDDKK%22
 
 val finalurlString = init+ccystring+last          //> finalurlString  : String = http://query.yahooapis.com/v1/public/yql?q=selec
-                                                  //| t%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22INRAED%22,%2
-                                                  //| 2INRAFN%22,%22INRALL%22,%22INRAMD%22,%22INRANG%22,%22INRAOA%22,%22INRARS%22
-                                                  //| ,%22INRAUD%22,%22INRAWG%22,%22INRAZN%22,%22INRBAM%22,%22INRBBD%22,%22INRBDT
-                                                  //| %22,%22INRBGN%22,%22INRBHD%22,%22INRBIF%22,%22INRBMD%22,%22INRBND%22,%22INR
-                                                  //| BOB%22,%22INRBRL%22,%22INRBSD%22,%22INRBTC%22,%22INRBTN%22,%22INRBWP%22,%22
-                                                  //| INRBYR%22,%22INRBZD%22,%22INRCAD%22,%22INRCDF%22,%22INRCHF%22,%22INRCLF%22,
-                                                  //| %22INRCLP%22,%22INRCNY%22,%22INRCOP%22,%22INRCRC%22,%22INRCUC%22,%22INRCUP%
-                                                  //| 22,%22INRCVE%22,%22INRCZK%22,%22INRDJF%22,%22INRDKK%22,%22INRDOP%22,%22INRD
-                                                  //| ZD%22,%22INREEK%22,%22INREGP%22,%22INRERN%22,%22INRETB%22,%22INREUR%22,%22I
-                                                  //| NRFJD%22,%22INRFKP%22,%22INRGBP%22,%22INRGEL%22,%22INRGGP%22,%22INRGHS%22,%
-                                                  //| 22INRGIP%22,%22INRGMD%22,%22INRGNF%22,%22INRGTQ%22,%22INRGYD%22,%22INRHKD%2
-                                                  //| 2,%22INRHNL%22,%22INRHR
-                                                  //| Output exceeds cutoff limit.
+                                                  //| t%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDRUB%22,%2
+                                                  //| 2USDMXN%22,%22USDINR%22,%22USDKRW%22,%22USDTRY%22,%22USDGBP%22,%22USDPLN%22
+                                                  //| ,%22USDNZD%22,%22USDCOP%22,%22USDAUD%22,%22USDCAD%22,%22USDTHB%22,%22USDCLP
+                                                  //| %22,%22USDUSD%22,%22USDEUR%22,%22USDSEK%22,%22USDSGD%22,%22USDNOK%22,%22USD
+                                                  //| JPY%22,%22USDZAR%22,%22USDMYR%22,%22USDTWD%22,%22USDCHF%22,%22USDPHP%22,%22
+                                                  //| USDILS%22,%22USDIDR%22,%22USDCNY%22,%22USDBRL%22,%22USDPEN%22,%22USDHUF%22,
+                                                  //| %22USDDKK%22)&env=store://datatables.org/alltableswithkeys
 val xchange =  XML.loadString(Source.fromURL(new URL(finalurlString)).mkString)
-                                                  //> xchange  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-0
-                                                  //| 8-04T20:40:49Z" yahoo:count="169" xmlns:yahoo="http://www.yahooapis.com/v1/
-                                                  //| base.rng"><results><rate id="INRAED"><Name>INR/AED</Name><Rate>0.0576</Rate
-                                                  //| ><Date>8/4/2015</Date><Time>9:39pm</Time><Ask>0.0576</Ask><Bid>0.0576</Bid>
-                                                  //| </rate><rate id="INRAFN"><Name>INR/AFN</Name><Rate>0.9643</Rate><Date>8/4/2
-                                                  //| 015</Date><Time>9:39pm</Time><Ask>0.9660</Ask><Bid>0.9643</Bid></rate><rate
-                                                  //|  id="INRALL"><Name>INR/ALL</Name><Rate>1.9906</Rate><Date>8/4/2015</Date><T
-                                                  //| ime>9:39pm</Time><Ask>2.0266</Ask><Bid>1.9906</Bid></rate><rate id="INRAMD"
-                                                  //| ><Name>INR/AMD</Name><Rate>7.4922</Rate><Date>8/4/2015</Date><Time>9:39pm</
-                                                  //| Time><Ask>7.4947</Ask><Bid>7.4922</Bid></rate><rate id="INRANG"><Name>INR/A
-                                                  //| NG</Name><Rate>0.0281</Rate><Date>8/4/2015</Date><Time>9:39pm</Time><Ask>0.
-                                                  //| 0281</Ask><Bid>0.0281</Bid></rate><rate id="INRAOA"><Name>INR/AOA</Name><Ra
-                                                  //| te>1.9749</Rate><Date>8
+                                                  //> xchange  : scala.xml.Elem = <query yahoo:lang="en-US" yahoo:created="2015-1
+                                                  //| 2-16T22:04:43Z" yahoo:count="31" xmlns:yahoo="http://www.yahooapis.com/v1/b
+                                                  //| ase.rng"><results><rate id="USDRUB"><Name>USD/RUB</Name><Rate>70.2885</Rate
+                                                  //| ><Date>12/16/2015</Date><Time>10:03pm</Time><Ask>70.4780</Ask><Bid>70.2885<
+                                                  //| /Bid></rate><rate id="USDMXN"><Name>USD/MXN</Name><Rate>16.9878</Rate><Date
+                                                  //| >12/16/2015</Date><Time>10:04pm</Time><Ask>16.9962</Ask><Bid>16.9878</Bid><
+                                                  //| /rate><rate id="USDINR"><Name>USD/INR</Name><Rate>66.4399</Rate><Date>12/16
+                                                  //| /2015</Date><Time>10:03pm</Time><Ask>66.4500</Ask><Bid>66.4399</Bid></rate>
+                                                  //| <rate id="USDKRW"><Name>USD/KRW</Name><Rate>1172.0551</Rate><Date>12/16/201
+                                                  //| 5</Date><Time>10:04pm</Time><Ask>1174.0601</Ask><Bid>1172.0551</Bid></rate>
+                                                  //| <rate id="USDTRY"><Name>USD/TRY</Name><Rate>2.9353</Rate><Date>12/16/2015</
+                                                  //| Date><Time>10:04pm</Time><Ask>2.9374</Ask><Bid>2.9353</Bid></rate><rate id=
+                                                  //| "USDGBP"><Name>USD/GBP<
                                                   //| Output exceeds cutoff limit.
 
 
@@ -272,49 +280,50 @@ val Ask  = (n \ "Ask").text
 Currency(Name,Rate,Date,Time,Bid,Ask)
 
 }                                                 //> currency1  : scala.collection.immutable.Seq[test.Currency] = List(Currency(
-                                                  //| INR/AED,0.0576,8/4/2015,9:39pm,0.0576,0.0576), Currency(INR/AFN,0.9643,8/4/
-                                                  //| 2015,9:39pm,0.9643,0.9660), Currency(INR/ALL,1.9906,8/4/2015,9:39pm,1.9906,
-                                                  //| 2.0266), Currency(INR/AMD,7.4922,8/4/2015,9:39pm,7.4922,7.4947), Currency(I
-                                                  //| NR/ANG,0.0281,8/4/2015,9:39pm,0.0281,0.0281), Currency(INR/AOA,1.9749,8/4/2
-                                                  //| 015,9:39pm,1.9749,1.9830), Currency(INR/ARS,0.1442,8/4/2015,9:40pm,0.1442,0
-                                                  //| .1443), Currency(INR/AUD,0.0212,8/4/2015,9:40pm,0.0212,0.0212), Currency(IN
-                                                  //| R/AWG,0.0281,8/4/2015,9:39pm,0.0281,0.0281), Currency(INR/AZN,0.0165,8/4/20
-                                                  //| 15,9:39pm,0.0165,0.0166), Currency(INR/BAM,0.0281,8/4/2015,9:39pm,0.0281,0.
-                                                  //| 0282), Currency(INR/BBD,0.0313,8/4/2015,9:39pm,0.0313,0.0314), Currency(INR
-                                                  //| /BDT,1.2185,8/4/2015,9:39pm,1.2185,1.2443), Currency(INR/BGN FIXING,0.0282,
-                                                  //| 8/4/2015,9:40pm,0.0282,0.0282), Currency(INR/BHD,0.0059,8/4/2015,9:39pm,0.0
-                                                  //| 059,0.0059), Currency(I
+                                                  //| USD/RUB,70.2885,12/16/2015,10:03pm,70.2885,70.4780), Currency(USD/MXN,16.98
+                                                  //| 78,12/16/2015,10:04pm,16.9878,16.9962), Currency(USD/INR,66.4399,12/16/2015
+                                                  //| ,10:03pm,66.4399,66.4500), Currency(USD/KRW,1172.0551,12/16/2015,10:04pm,11
+                                                  //| 72.0551,1174.0601), Currency(USD/TRY,2.9353,12/16/2015,10:04pm,2.9353,2.937
+                                                  //| 4), Currency(USD/GBP,0.6666,12/16/2015,10:04pm,0.6666,0.6667), Currency(USD
+                                                  //| /PLN,3.9406,12/16/2015,10:04pm,3.9406,3.9484), Currency(USD/NZD,1.4707,12/1
+                                                  //| 6/2015,10:04pm,1.4707,1.4711), Currency(USD/COP,3334.4500,12/16/2015,10:04p
+                                                  //| m,3334.4500,3336.7400), Currency(USD/AUD,1.3828,12/16/2015,10:04pm,1.3828,1
+                                                  //| .3833), Currency(USD/CAD,1.3783,12/16/2015,10:04pm,1.3783,1.3786), Currency
+                                                  //| (USD/THB,35.8995,12/16/2015,10:04pm,35.8995,35.9520), Currency(USD/CLP,705.
+                                                  //| 9950,12/16/2015,10:03pm,705.9950,706.5000), Currency(USD/USD,1.0000,N/A,N/A
+                                                  //| ,1.0000,1.0000), Curren
                                                   //| Output exceeds cutoff limit.
 
 currency1 filter {x => x.Name != "N/A"} map {x => println(x.Name,x.Rate,x.Date,x.Time)}
-                                                  //> (INR/AED,0.0576,8/4/2015,9:39pm)
-                                                  //| (INR/AFN,0.9643,8/4/2015,9:39pm)
-                                                  //| (INR/ALL,1.9906,8/4/2015,9:39pm)
-                                                  //| (INR/AMD,7.4922,8/4/2015,9:39pm)
-                                                  //| (INR/ANG,0.0281,8/4/2015,9:39pm)
-                                                  //| (INR/AOA,1.9749,8/4/2015,9:39pm)
-                                                  //| (INR/ARS,0.1442,8/4/2015,9:40pm)
-                                                  //| (INR/AUD,0.0212,8/4/2015,9:40pm)
-                                                  //| (INR/AWG,0.0281,8/4/2015,9:39pm)
-                                                  //| (INR/AZN,0.0165,8/4/2015,9:39pm)
-                                                  //| (INR/BAM,0.0281,8/4/2015,9:39pm)
-                                                  //| (INR/BBD,0.0313,8/4/2015,9:39pm)
-                                                  //| (INR/BDT,1.2185,8/4/2015,9:39pm)
-                                                  //| (INR/BGN FIXING,0.0282,8/4/2015,9:40pm)
-                                                  //| (INR/BHD,0.0059,8/4/2015,9:39pm)
-                                                  //| (INR/BIF,24.2635,8/4/2015,9:39pm)
-                                                  //| (INR/BMD,0.0157,8/4/2015,9:39pm)
-                                                  //| (INR/BND,0.0216,8/4/2015,9:39pm)
-                                                  //| (INR/BOB,0.1080,8/4/2015,9:39pm)
-                                                  //| (INR/BRL,0.0543,8/4/2015,9:40pm)
-                                                  //| (INR/BSD,0.0157,8/4/2015,9:39pm)
-                                                  //| (INR/BTC,0.0001,8/4/2015,9:39pm)
-                                                  //| (INR/BTN,0.9997,8/4/2015,9:39pm)
-                                                  //| (INR/BWP,0.1584,8/4/2015,9:39pm)
-                                                  //| (INR/BYR,243.0664,8/4/2015,9:39pm)
-                                                  //| (INR/BZD,0.0316,8/4/2015,9:39pm)
+                                                  //> (USD/RUB,70.2885,12/16/2015,10:03pm)
+                                                  //| (USD/MXN,16.9878,12/16/2015,10:04pm)
+                                                  //| (USD/INR,66.4399,12/16/2015,10:03pm)
+                                                  //| (USD/KRW,1172.0551,12/16/2015,10:04pm)
+                                                  //| (USD/TRY,2.9353,12/16/2015,10:04pm)
+                                                  //| (USD/GBP,0.6666,12/16/2015,10:04pm)
+                                                  //| (USD/PLN,3.9406,12/16/2015,10:04pm)
+                                                  //| (USD/NZD,1.4707,12/16/2015,10:04pm)
+                                                  //| (USD/COP,3334.4500,12/16/2015,10:04pm)
+                                                  //| (USD/AUD,1.3828,12/16/2015,10:04pm)
+                                                  //| (USD/CAD,1.3783,12/16/2015,10:04pm)
+                                                  //| (USD/THB,35.8995,12/16/2015,10:04pm)
+                                                  //| (USD/CLP,705.9950,12/16/2015,10:03pm)
+                                                  //| (USD/USD,1.0000,N/A,N/A)
+                                                  //| (USD/EUR,0.9164,12/16/2015,10:04pm)
+                                                  //| (USD/SEK,8.5005,12/16/2015,10:04pm)
+                                                  //| (USD/SGD,1.4076,12/16/2015,10:04pm)
+                                                  //| (USD/NOK,8.7591,12/16/2015,10:04pm)
+                                                  //| (USD/JPY,122.2150,12/16/2015,10:04pm)
+                                                  //| (USD/ZAR,14.9460,12/16/2015,10:04pm)
+                                                  //| (USD/MYR,4.2881,12/16/2015,10:03pm)
+                                                  //| (USD/TWD,32.7540,12/16/2015,10:03pm)
+                                                  //| (USD/CHF,0.9898,12/16/2015,10:04pm)
+                                                  //| (USD/PHP,47.2900,12/16/2015,10:04pm)
+                                                  //| (USD/
+                                                  //| Output exceeds cutoff limit.
 
-
+//import com.DC.FTDataParser._
+//CorrelationMatricCalc.getCorMatrix("USA", "28-08-2015", 100)
 
 
 

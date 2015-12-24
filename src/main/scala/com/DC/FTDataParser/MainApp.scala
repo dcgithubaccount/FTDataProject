@@ -8,11 +8,13 @@ package com.DC.FTDataParser
 		import com.DC.FTDataParser.FileParser._
         import com.DC.FTDataParser.DataLoader._
         import com.DC.FTDataParser.ReportWriter._
+        import com.DC.FTDataParser.CorrelationMatricCalc._
         val FTData = getdatafromFT(args(0),args(1))
-        //val FTData = getdatafromFT("Swiss","20150211")
+        //val FTData = getdatafromFT("Brazil","20150211")
         setDataInMongo(FTData)
         ValuePricetoBook(args(0),args(1))
-  
+        //val cor = getCorMatrix("India", "14-09-2015", 100)
+        //saveCorMatrix(cor)
   
 	
 
