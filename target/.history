@@ -330,3 +330,15 @@ exit
 run
 exit
 run
+eclipse
+exit 
+run
+compile
+assembly
+exit
+compile
+assembly
+run
+exit
+compile
+assembly

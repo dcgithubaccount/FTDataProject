@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-org.apache.camel.scala.converter.ScalaTypeConverter
-org.apache.camel.scala.converter.ScalaImmutableCollections
-org.apache.camel.scala.converter.ScalaMutableCollections
-org.apache.camel.scala.converter.ScalaOption
 # keep at least one package in camel-core so the annotation type converter
 # should at least be able to discover one package to scan notice that there
 # are no @Converter classes in org.apache.camel.core. As all camel-core

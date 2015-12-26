@@ -1,0 +1,126 @@
+<html>
+<header>
+<title>Quartz</title>
+</header>
+<body>
+<h1>Quartz</h1>
+<b>Description:</b> A Quartz Component<br/>
+<b>Scheme:</b> quartz<br/>
+<b>Syntax:</b> quartz:groupName/timerName<br/>
+<b>Maven:</b> org.apache.camel/camel-quartz/2.16.1<br/>
+<p>A <a href="http://activemq.apache.org/quartz.html">Quartz Endpoint</a></p>
+<table class='table'>
+  <tr>
+    <th align="left">Name</th>
+    <th align="left">Kind</th>
+    <th align="left">Group</th>
+    <th align="left">Required</th>
+    <th align="left">Default</th>
+    <th align="left">Type</th>
+    <th align="left">Enum</th>
+    <th align="left">Description</th>
+  </tr>
+  <tr>
+    <td>groupName</td>
+    <td>path</td>
+    <td>consumer</td>
+    <td></td>
+    <td>Camel</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td> The quartz group name to use. The combination of group name and timer name should be unique.
+</td>
+  </tr>
+  <tr>
+    <td>timerName</td>
+    <td>path</td>
+    <td>consumer</td>
+    <td>true</td>
+    <td></td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td> The quartz timer name to use. The combination of group name and timer name should be unique.
+</td>
+  </tr>
+  <tr>
+    <td>cron</td>
+    <td>parameter</td>
+    <td>consumer</td>
+    <td></td>
+    <td></td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td>Specifies a cron expression to define when to trigger.</td>
+  </tr>
+  <tr>
+    <td>deleteJob</td>
+    <td>parameter</td>
+    <td>consumer</td>
+    <td></td>
+    <td>true</td>
+    <td>boolean</td>
+    <td></td>
+    <td>If set to true, then the trigger automatically delete when route stop.
+ Else if set to false, it will remain in scheduler. When set to false, it will also mean user may reuse
+ pre-configured trigger with camel Uri. Just ensure the names match.
+ Notice you cannot have both deleteJob and pauseJob set to true.</td>
+  </tr>
+  <tr>
+    <td>pauseJob</td>
+    <td>parameter</td>
+    <td>consumer</td>
+    <td></td>
+    <td></td>
+    <td>boolean</td>
+    <td></td>
+    <td>If set to true, then the trigger automatically pauses when route stop.
+ Else if set to false, it will remain in scheduler. When set to false, it will also mean user may reuse
+ pre-configured trigger with camel Uri. Just ensure the names match.
+ Notice you cannot have both deleteJob and pauseJob set to true.</td>
+  </tr>
+  <tr>
+    <td>stateful</td>
+    <td>parameter</td>
+    <td>consumer</td>
+    <td></td>
+    <td></td>
+    <td>boolean</td>
+    <td></td>
+    <td>Uses a Quartz StatefulJob instead of the default job.</td>
+  </tr>
+  <tr>
+    <td>usingFixedCamelContextName</td>
+    <td>parameter</td>
+    <td>consumer</td>
+    <td></td>
+    <td></td>
+    <td>boolean</td>
+    <td></td>
+    <td>If it is true, JobDataMap uses the CamelContext name directly to reference the CamelContext,
+ if it is false, JobDataMap uses use the CamelContext management name which could be changed during the deploy time.</td>
+  </tr>
+  <tr>
+    <td>exchangePattern</td>
+    <td>parameter</td>
+    <td>advanced</td>
+    <td></td>
+    <td>InOnly</td>
+    <td>org.apache.camel.ExchangePattern</td>
+    <td>InOnly<br/>RobustInOnly<br/>InOut<br/>InOptionalOut<br/>OutOnly<br/>RobustOutOnly<br/>OutIn<br/>OutOptionalIn</td>
+    <td>Sets the default exchange pattern when creating an exchange</td>
+  </tr>
+  <tr>
+    <td>synchronous</td>
+    <td>parameter</td>
+    <td>advanced</td>
+    <td></td>
+    <td>false</td>
+    <td>boolean</td>
+    <td></td>
+    <td>Sets whether synchronous processing should be strictly used, or Camel is allowed to use asynchronous processing (if supported).</td>
+  </tr>
+</table>
+<h2>quartz consumer</h2>
+<p></p>
+</body>
+</html>
